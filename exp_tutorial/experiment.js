@@ -1,7 +1,6 @@
 const jsPsych = initJsPsych();
 let timeline = [];
 
-
 const irb = {
     // Which plugin to use
     type: jsPsychHtmlButtonResponse,
@@ -27,97 +26,163 @@ const demo = {
                 prompt: 'Race/Ethnicity: (may select multiple)',
                 name: 'race',
                 options: ['American Indian or Alaskan Native', 'Asian / Pacific Islander',
-                'Black', 'Hispanic', 'White']
+                'Black', 'Hispanic', 'White'],
+                required: false
             },
             {
                 type: 'drop-down',
                 prompt: 'Gender:',
                 name: 'gender',
-                options: ['Woman', 'Man', 'Non-binary/Non-conforming']
+                options: ['Woman', 'Man', 'Non-binary/Non-conforming'],
+                required: false
+            },
+            {
+                type: 'multi-choice',
+                prompt: 'What is your age?',
+                name: 'age',
+                options: ['18-24', '25-34', '35-44', '45-54', '55-64', '65+'],
+                required: false
             },
             {
                 type: 'multi-choice',
                 prompt: 'Do you think the police are generally honest?',
                 name: 'police honest',
-                options: ['Yes', 'No']
+                options: ['Yes', 'No'],
+                required: false
             },
             {
                 type: 'multi-choice',
                 prompt: 'Do they respect a person\'s basic rights?',
                 name: 'police rights',
-                options: ['Yes', 'No']
+                options: ['Yes', 'No'],
+                required: false
             },
             {
                 type: 'multi-choice',
                 prompt: 'Do the police usually listen to people\’s views before making a decision?',
                 name: 'police listen',
-                options: ['Yes', 'No']
+                options: ['Yes', 'No'],
+                required: false
             },
             {
                 type: 'multi-choice',
                 prompt: 'Do you generally trust the police?',
                 name: 'police trust',
-                options: ['Yes', 'No']
-            },
-            {
-                type: 'multi-choice',
-                prompt: 'Have you been stopped by the police?',
-                name: 'police stop',
-                options: ['Yes', 'No']
+                options: ['Yes', 'No'],
+                required: false
             },
             {
                 type: 'likert',
-                prompt: 'How fairly do you feel you had been treated in your last police encounter?',
+                prompt: 'How conservative would you rate yourself?',
+                name: 'conservative',
+                required: false,
+                likert_scale_min_label: 'Extremely Conservative',
+                likert_scale_max_label: 'Not at all',
+                likert_scale_values: [
+                  {value: 1},
+                  {value: 2},
+                  {value: 3},
+                  {value: 4},
+                  {value: 5}
+              ]
+            },
+            {
+                type: 'likert',
+                prompt: 'How liberal would you rate yourself?',
                 name: 'police stop',
-                options: ['Extremely fairly', 'Very Fairly', 'Somewhat Fairly','Not so fairly', 'Not at all Fairly']
+                required: false,
+                likert_scale_min_label: 'Extremely Liberal',
+                likert_scale_max_label: 'Not at all',
+                likert_scale_values: [
+                  {value: 1},
+                  {value: 2},
+                  {value: 3},
+                  {value: 4},
+                  {value: 5}
+              ]
             }
         ]
     ]
 };
-
 timeline.push(demo)
-
 
 const instructions = {
     type: jsPsychHtmlKeyboardResponse,
-    stimulus: "In this experiment, you will see a series of article headlines and corresponding leads. You will also answer a number of questions following each headline!",
+    stimulus: "In this experiment, you will see a series of article headlines and corresponding leads. You will also answer a number of questions following each headline! Please press the spacebar to continue.",
     choices: [" "]
 };
 timeline.push(instructions);
 
-// var json = JSON.stringify("Exp1Stim.json");
-// var js_sim = JSON.parse(json);
 
-
-const questionnaire = {
-    type: jsPsychSurvey,
-    pages: [
+let girly = create_js_stim(trial_objects);
+let tv_array = create_timevari(girly);
+const trials = {
+  timeline: [
+    {
+      type: jsPsychHtmlKeyboardResponse,
+      choices: [""],
+      stimulus: "",
+      response_ends_trial: false,
+      trial_duration: 1000,
+      prompt: function () {
+        var html = jsPsych.timelineVariable('stimulus');
+        return html;
+      }
+    },
+    {
+      type: jsPsychSurvey,
+      pages:[
         [
-            {
-                type: 'html',
-                prompt: 'Please answer the following questions.'
-            },
-            {
-                type: 'multi-choice',
-                prompt: 'Did you read the instructions and do you think you did the task correctly?',
-                name: 'correct',
-                options: ['Yes', 'No', 'I was confused']
-            }
-        ],
-        [
-            {
-                type: 'drop-down',
-                prompt: 'Gender:',
-                name: 'gender',
-                options: ['Female', 'Male', 'Non-binary/Non-conforming', 'Other']
-            }
+          {
+              type: 'text',
+              prompt: 'Who was harmed?',
+              name: 'harm',
+              required: false
+          },
+          {
+              type: 'text',
+              prompt: 'Who was doing the harming?',
+              name: 'harmer',
+              required: false
+          },
+          {
+              type: 'text',
+              prompt: 'How much is the agent (the initiator of some action) to blame?',
+              name: 'blame agent',
+              required: false
+          },
+          {
+              type: 'text',
+              prompt: 'How much is the patient (the entity undergoing the effect of some action) to blame?',
+              name: 'blame patient',
+              required: false
+          },
+          {
+              type: 'text',
+              prompt: 'How confident are you regarding the Blameworthiness of the event ?',
+              name: 'confident Blameworthiness',
+              required: false
+          },
+          {
+              type: 'text',
+              prompt: 'For the individual you assigned more blame to, how likely are they going to be convicted or blamed externally for the event?',
+              name: 'convict agent',
+              required: false
+          },
+          {
+              type: 'text',
+              prompt: 'Was the agent justified?',
+              name: 'justify agent',
+              required: false
+          },
         ]
-    ]
-};
-
-timeline.push(questionnaire)
-
-
+      ]
+    },
+  ],
+  timeline_variables: tv_array,
+  randomize_order: true
+}
+timeline.push(trials)
 
 
 

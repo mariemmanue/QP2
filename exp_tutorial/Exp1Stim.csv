@@ -1,140 +1,133 @@
-Group,Agentive (Non-Cop Fatality if Target),Nonagentive (Non-Cop Fatality if Target),Agentive (Cop Fatality if Target),Nonagentive (Cop Fatality if Target),
-Target,"Headline: Police Officer Fatally Shoots Man in Atlanta During Confrontation
+Group,Agentive (Non-Cop Fatality),Nonagentive (Non-Cop Fatality),Agentive (Cop Fatality),Nonagentive (Cop Fatality)
+Target,"Police Officer Fatally Shoots Man in Atlanta During Confrontation
 
- According to reports the police officer was responding to a call about a disturbance when he encountered the man. Details of the incident are still emerging.","""Headline: Man Fatally Shot in Atlanta During Confrontation with Police Officer
+According to reports the police officer was responding to a call about a disturbance when he encountered the man. Details of the incident are still emerging.","Man Fatally Shot in Atlanta During Confrontation with Police Officer
 
-According to reports the police officer was responding to a call about a disturbance when he encountered the man. Details of the incident are still emerging.","""Headline: Man Fatally Shoots Officer in Atlanta During Confrontation
+According to reports the police officer was responding to a call about a disturbance when he encountered the man. Details of the incident are still emerging.","Man Fatally Shoots Police Officer in Atlanta During Confrontation
 
-According to reports the police officer was responding to a call about a disturbance when he encountered the man. Details of the incident are still emerging.","""Headline: Police Officer Fatally Shot in Atlanta During Confrontation with Man
+According to reports the police officer was responding to a call about a disturbance when he encountered the man. Details of the incident are still emerging.","Police Officer Fatally Shot in Atlanta During Confrontation with Man
 
-According to reports the police officer was responding to a call about a disturbance when he encountered the man. Details of the incident are still emerging.",
-Target,"""Headline: Criminal probe focuses on school where Cop shot teacher after fight
+According to reports the police officer was responding to a call about a disturbance when he encountered the man. Details of the incident are still emerging."
+Target,"Criminal probe focuses on school where Cop shot teacher after fight
 
-The fatal shooting of a high school teacher has sparked outrage. The incident occurred when police responded to a call for assistance and engaged in a struggle with the victim who later died in the hospital. ","""Headline: Criminal probe focuses on school where teacher shot after fight with cop
+The fatal shooting of cop has sparked outrage. The incident occurred when cops responded to a call for assistance and engaged in a struggle with a teacher. The cop later died in the hospital.","Criminal probe focuses on school where teacher was shot after fight with cop
 
-The fatal shooting of a high school teacher has sparked outrage. The incident occurred when police responded to a call for assistance and engaged in a struggle with the victim who later died in the hospital. ","""Headline: Criminal probe focuses on school where teacher shot cop after fight
+The fatal shooting of cop has sparked outrage. The incident occurred when cops responded to a call for assistance and engaged in a struggle with a teacher. The cop later died in the hospital.","Criminal probe focuses on school where teacher shot cop after fight
 
-The fatal shooting of police has sparked outrage. The incident occurred when police responded to a call for assistance and engaged in a struggle with a teacher cop later died in the hospital. ""","""""Headline: Criminal probe focuses on school where cop shot after fight with teacher
+The fatal shooting of cop has sparked outrage. The incident occurred when cops responded to a call for assistance and engaged in a struggle with a teacher. The cop later died in the hospital.","Criminal probe focuses on school where cop was shot after fight with teacher
 
-The fatal shooting of police has sparked outrage. The incident occurred when police responded to a call for assistance and engaged in a struggle with a teacher cop later died in the hospital. ",
-Target,"Headline: Officers shoot Protesters during Clash Several Injured and Arrested
+The fatal shooting of cop has sparked outrage. The incident occurred when cops responded to a call for assistance and engaged in a struggle with a teacher. The cop later died in the hospital."
+Target,"Officers shoot Protesters during Clash Several Injured and Arrested
 
-""Several people were injured and arrested in the melee including both protesters and police officers. Local officials have condemned the violence and called for calm. The situation remains tense as protests continue to simmer in the city.""","Headline: Protesters shot during clash with Officers Several Injured and Arrested
+Several people were injured and arrested in the melee including both protesters and officers. Local officials have condemned the violence and called for calm. The situation remains tense as protests continue to simmer in the city.","Protesters shot during clash with Officers Several Injured and Arrested
 
-""Several people were injured and arrested in the melee including both protesters and police officers. Local officials have condemned the violence and called for calm. The situation remains tense as protests continue to simmer in the city.""","Headline: Protesters Shoot Officers during Clash Several Injured and Arrested
+Several people were injured and arrested in the melee including both protesters and officers. Local officials have condemned the violence and called for calm. The situation remains tense as protests continue to simmer in the city.","Protesters Shoot Officers during Clash Several Injured and Arrested
 
-""Several people were injured and arrested in the melee including both protesters and police officers. Local officials have condemned the violence and called for calm. The situation remains tense as protests continue to simmer in the city.""","Headline: Officers Shot during clash with protestors Several Injured and Arrested
+Several people were injured and arrested in the melee including both protesters and officers. Local officials have condemned the violence and called for calm. The situation remains tense as protests continue to simmer in the city.","Officers Shot during clash with protestors Several Injured and Arrested
 
-""Several people were injured and arrested in the melee including both protesters and police officers. Local officials have condemned the violence and called for calm. The situation remains tense as protests continue to simmer in the city.""",
-Target,"Headline: ""Student Shot and Killed by Campus Security in Controversial Incident"" 
+Several people were injured and arrested in the melee including both protesters and officers. Local officials have condemned the violence and called for calm. The situation remains tense as protests continue to simmer in the city."
+Target,"Campus Security Guard Shoots and kills Student in Controversial Incident
 
-""The circumstances surrounding the incident are still unclear but eyewitnesses have described a chaotic scene in which tensions were high between the student and security. The incident has sparked widespread outrage and protests from students and faculty who are demanding answers and accountability from the university administration and law enforcement officials.""","""Headline: """"Student Shot and Killed in Controversial Incident with Campus Security """" 
+The circumstances surrounding the incident are still unclear but eyewitnesses have described a chaotic scene in which tensions were high between the student and security guard. The incident has sparked widespread outrage and protests from students and faculty who are demanding answers and accountability from the university administration.","Student Shot and Killed in Controversial Incident with Campus Security Guard
 
-""""The circumstances surrounding the incident are still unclear but eyewitnesses have described a chaotic scene in which tensions were high between the student and security. The incident has sparked widespread outrage and protests from students and faculty who are demanding answers and accountability from the university administration and law enforcement officials.""""""","Headline: ""Campus Security Shot and Killed by Student in Controversial Incident"" 
+The circumstances surrounding the incident are still unclear but eyewitnesses have described a chaotic scene in which tensions were high between the student and security guard. The incident has sparked widespread outrage and protests from students and faculty who are demanding answers and accountability from the university administration.","Student Shoots and kills Campus Security Guard in Controversial Incident
 
-""The circumstances surrounding the incident are still unclear but eyewitnesses have described a chaotic scene in which tensions were high between the student and security. The incident has sparked widespread outrage and protests from students and faculty who are demanding answers and accountability from the university administration and law enforcement officials.""","""Headline: """"Campus Security Shot and Killed in Controversial Incident with Student """" 
+The circumstances surrounding the incident are still unclear but eyewitnesses have described a chaotic scene in which tensions were high between the student and security guard. The incident has sparked widespread outrage and protests from students and faculty who are demanding answers and accountability from the university administration.","Campus Security Guard Shot and Killed in Controversial Incident with Student
 
-""""The circumstances surrounding the incident are still unclear but eyewitnesses have described a chaotic scene in which tensions were high between the student and security. The incident has sparked widespread outrage and protests from students and faculty who are demanding answers and accountability from the university administration and law enforcement officials.""""""",
-Target,"Headline: Video Footage Shows County Sheriff shooting a group of teens during Traffic Stop Sparks Outrage
+The circumstances surrounding the incident are still unclear but eyewitnesses have described a chaotic scene in which tensions were high between the student and security guard. The incident has sparked widespread outrage and protests from students and faculty who are demanding answers and accountability from the university administration."
+Target,"Video Footage Shows County Sheriff shooting a group of teens during Traffic Stop Sparks Outrage
 
-Video footage has emerged of a violent encounter between a county sheriff and a group of teenagers following a traffic stop sparking outrage. The teenagers involved in the incident were reportedly stopped over a minor traffic violation and the situation quickly escalated. Local officials have condemned the incident.","Headline: Video Footage Shows group of teens being shot at during Traffic Stop Sparks Outrage""
+Video footage has emerged of a violent encounter between a county sheriff and a group of teenagers following a traffic stop sparking outrage. The teenagers involved in the incident were reportedly stopped over a minor traffic violation and the situation quickly escalated. Local officials have condemned the incident.","Video Footage Shows group of teens being shot at during Traffic Stop 
 
-Video footage has emerged of a violent encounter between a county sheriff and a group of teenagers following a traffic stop sparking outrage. The teenagers involved in the incident were reportedly stopped over a minor traffic violation and the situation quickly escalated. Local officials have condemned the incident.","Headline: Video Footage Shows group of teens shooting a county sherif during Traffic Stop Sparks Outrage""
+Video footage has emerged of a violent encounter between a county sheriff and a group of teenagers following a traffic stop sparking outrage. The teenagers involved in the incident were reportedly stopped over a minor traffic violation and the situation quickly escalated. Local officials have condemned the incident.","Video Footage Shows group of teens shooting a County Sheriff during Traffic Stop Sparks Outrage
 
-Video footage has emerged of a violent encounter between a county sheriff and a group of teenagers following a traffic stop sparking outrage. The teenagers involved in the incident were reportedly stopped over a minor traffic violation and the situation quickly escalated. Local officials have condemned the incident.","Headline: Video Footage Shows county sheriff being shot at during Traffic Stop of teens Sparks Outrage""
+Video footage has emerged of a violent encounter between a county sheriff and a group of teenagers following a traffic stop sparking outrage. The teenagers involved in the incident were reportedly stopped over a minor traffic violation and the situation quickly escalated. Local officials have condemned the incident.","Video Footage Shows county sheriff being shot at during Traffic Stop of teens
 
-Video footage has emerged of a violent encounter between a county sheriff and a group of teenagers following a traffic stop sparking outrage. The teenagers involved in the incident were reportedly stopped over a minor traffic violation and the situation quickly escalated. Local officials have condemned the incident.",
-Target,"Headline: """"State Trooper Charged with Assault after Shooting Club Bouncer""
+Video footage has emerged of a violent encounter between a county sheriff and a group of teenagers following a traffic stop sparking outrage. The teenagers involved in the incident were reportedly stopped over a minor traffic violation and the situation quickly escalated. Local officials have condemned the incident."
+Target,"State Trooper Charged with Assault after Shooting Club Bouncer
 
-The incident which occurred outside a popular nightspot has sparked outrage and calls for justice. According to witnesses the men had gotten into a verbal altercation and the trooper pulled out his weapon and fired several shots. The trooper is expected to appear in court to face charges of assault and unlawful use of a weapon.","""Headline: """"Club Bouncer Shot State Trooper Charged with Assault ""
+The incident which occurred outside a popular nightspot has sparked outrage and calls for justice. According to witnesses the men had gotten into a verbal altercation. The trooper is expected to appear in court to face charges of assault and unlawful use of a weapon.","Club Bouncer Shot\, State Trooper Charged with Assault
 
-The incident which occurred outside a popular nightspot has sparked outrage and calls for justice. According to witnesses the men had gotten into a verbal altercation and a weapon was pulled out where several shots were fired. The trooper is expected to appear in court to face charges of assault and unlawful use of a weapon.","""Headline: ""Club Bouncer Charged with Assault after Shooting State Trooper ""
+The incident which occurred outside a popular nightspot has sparked outrage and calls for justice. According to witnesses the men had gotten into a verbal altercation. The trooper is expected to appear in court to face charges of assault and unlawful use of a weapon.","Club Bouncer Charged with Assault after Shooting State Trooper
 
-The incident which occurred outside a popular nightspot has sparked outrage and calls for justice. According to witnesses the men had gotten into a verbal altercation and the bouncer pulled out his weapon and fired several shots. The bouncer is expected to appear in court to face charges of assault and unlawful use of a weapon.""","""""""Headline: """"State Trooper Shot Club Bouncer Charged with Assault """"
+The incident which occurred outside a popular nightspot has sparked outrage and calls for justice. According to witnesses the men had gotten into a verbal altercation. The bouncer is expected to appear in court to face charges of assault and unlawful use of a weapon.","State Trooper Shot\, Club Bouncer Charged with Assault
 
-The incident which occurred outside a popular nightspot has sparked outrage and calls for justice. According to witnesses the men had gotten into a verbal altercation and a weapon was pulled out where several shots were fired. The bouncer is expected to appear in court to face charges of assault and unlawful use of a weapon.""",
-Target,"Headline: ""Cops Shoot Protesters in Confrontation Caught on Camera""
+The incident which occurred outside a popular nightspot has sparked outrage and calls for justice. According to witnesses the men had gotten into a verbal altercation. The bouncer is expected to appear in court to face charges of assault and unlawful use of a weapon."
+Target,"Cops Shoot Protesters in Confrontation Caught on Camera
 
- The incident occurred during a peaceful demonstration which had been organized to call for justice and reform in law enforcement. Eyewitnesses reported that tensions began to escalate when cops attempted to disperse the crowd using tear gas and rubber bullets. Protesters reportedly threw objects at the cops in response leading to a violent confrontation. The names and conditions of those who were injured have not been released at this time.
-","Headline: ""Protesters Shot in Confrontation with Cops Caught on Camera""
+The incident occurred during a peaceful demonstration which had been organized to call for justice and reform in law enforcement. Eyewitnesses reported that tensions began to escalate when cops attempted to disperse the crowd using tear gas and rubber bullets. Protesters reportedly threw objects at the cops in response leading to a violent confrontation. The names and conditions of those who were injured have not been released at this time.
+","Protesters Shot in Confrontation with Cops Caught on Camera
 
- The incident occurred during a peaceful demonstration which had been organized to call for justice and reform in law enforcement. Eyewitnesses reported that tensions began to escalate when cops attempted to disperse the crowd using tear gas and rubber bullets. Protesters reportedly threw objects at the cops in response leading to a violent confrontation. The names and conditions of those who were injured have not been released at this time.
-","""Headline: """"Protesters Shoot Cops in Confrontation Caught on Camera""
+The incident occurred during a peaceful demonstration which had been organized to call for justice and reform in law enforcement. Eyewitnesses reported that tensions began to escalate when cops attempted to disperse the crowd using tear gas and rubber bullets. Protesters reportedly threw objects at the cops in response leading to a violent confrontation. The names and conditions of those who were injured have not been released at this time.
+","Protesters Shoot Cops in Confrontation Caught on Camera
 
- The incident occurred during a peaceful demonstration which had been organized to call for justice and reform in law enforcement. Eyewitnesses reported that tensions began to escalate when cops attempted to disperse the crowd using tear gas and rubber bullets. Protesters reportedly threw objects at the cops in response leading to a violent confrontation. The names and conditions of those who were injured have not been released at this time.
-","Headline: ""Cops Shot in Confrontation with Protestors Caught on Camera""
+The incident occurred during a peaceful demonstration which had been organized to call for justice and reform in law enforcement. Eyewitnesses reported that tensions began to escalate when cops attempted to disperse the crowd using tear gas and rubber bullets. Protesters reportedly threw objects at the cops in response leading to a violent confrontation. The names and conditions of those who were injured have not been released at this time.
+","Cops Shot in Confrontation with Protestors Caught on Camera\""
 
- The incident occurred during a peaceful demonstration which had been organized to call for justice and reform in law enforcement. Eyewitnesses reported that tensions began to escalate when cops attempted to disperse the crowd using tear gas and rubber bullets. Protesters reportedly threw objects at the cops in response leading to a violent confrontation. The names and conditions of those who were injured have not been released at this time.
-",
-Target,"Headline: ""Salinas Police Chief shot fisherman during car accident""
+The incident occurred during a peaceful demonstration which had been organized to call for justice and reform in law enforcement. Eyewitnesses reported that tensions began to escalate when cops attempted to disperse the crowd using tear gas and rubber bullets. Protesters reportedly threw objects at the cops in response leading to a violent confrontation. The names and conditions of those who were injured have not been released at this time.
+"
+Target,"Salinas Police Chief shot fisherman during car accident
 
-According to reports the police chief was driving his personal vehicle when he was involved in a collision with the fisherman. The incident eventually turned into a confrontation where the police chief discharged his gun and struck the fisherman in the leg. The fisherman was immediately transported to a nearby hospital for treatment but later died.","Headline: ""Salinas fisherman accidentally shot during car accident with Police Chief ""
+According to reports the police chief was driving his personal vehicle when he was involved in a collision with the fisherman. The incident eventually turned into a confrontation. The fisherman was immediately transported to a nearby hospital for treatment.","Salinas fisherman accidentally shot during car accident with Police Chief
 
-According to reports the police chief was driving his personal vehicle when he was involved in a collision with the fisherman. The incident eventually turned into a confrontation where the police chief's gun discharged and struck the fisherman in the leg. The fisherman was immediately transported to a nearby hospital for treatment but later died.","""Headline: """"Salinas fisherman shot Police Chief during car accident  """"
+According to reports the police chief was driving his personal vehicle when he was involved in a collision with the fisherman. The incident eventually turned into a confrontation. The fisherman was immediately transported to a nearby hospital for treatment.","Salinas fisherman shot Police Chief during car accident 
 
-According to reports the police chief was driving his personal vehicle when he was involved in a collision with the fisherman. The incident eventually turned into a confrontation where the fisherman discharged his gun and struck the police chief in the leg. The police chief was immediately transported to a nearby hospital for treatment but later died.""","""Headline: """"Salinas Police Chief accidentally shot during car accident with fisherman """"
+According to reports the police chief was driving his personal vehicle when he was involved in a collision with the fisherman. The incident eventually turned into a confrontation. The fisherman was immediately transported to a nearby hospital for treatment.","Salinas Police Chief accidentally shot during car accident with fisherman
 
-According to reports the police chief was driving his personal vehicle when he was involved in a collision with the fisherman. The incident eventually turned into a confrontation where the fisherman's gun discharged and struck the police chief in the leg. The police chief was immediately transported to a nearby hospital for treatment but later died.""",
-Target,"Headline: ""Border Patrol Agent Faces Backlash after shooting activist with Rubber Bullets during clash""
+According to reports the police chief was driving his personal vehicle when he was involved in a collision with the fisherman. The incident eventually turned into a confrontation. The fisherman was immediately transported to a nearby hospital for treatment."
+Target,"Border Patrol Agent Faces Backlash after shooting activist with Rubber Bullets during clash
 
- The incident occurred during a protest at the US-Mexico border where activists had gathered. According to eyewitnesses the clash began when the Border Patrol agent fired rubber bullets at the protesters hitting one activist in the head. The activist was immediately attended to by fellow protesters but their injuries were reported to be life-threatening. ","""Headline: ""Activist shot with Rubber Bullets during clash with Border Patrol Agent""
+The incident occurred during a protest at the US-Mexico border where activists had gathered. According to eyewitnesses then a clash began. The activist was immediately attended to by fellow protesters but their injuries were not reported to be life-threatening.","Activist shot with Rubber Bullets during clash with Border Patrol Agent
 
- The incident occurred during a protest at the US-Mexico border where activists had gathered. According to eyewitnesses the clash began when rubber bullets were fired hitting one activist in the head. The activist was immediately attended to by fellow protesters but their injuries were reported to be life-threatening.","Headline: ""Activist Faces Backlash after shooting Border Patrol Agent with Rubber Bullets during clash""
+The incident occurred during a protest at the US-Mexico border where activists had gathered. According to eyewitnesses then a clash began. The activist was immediately attended to by fellow protesters but their injuries were not reported to be life-threatening.","Activist Faces Backlash after shooting Border Patrol Agent with Rubber Bullets during clash
 
- The incident occurred during a protest at the US-Mexico border where activists had gathered. According to eyewitnesses the clash began when the activist began shooting rubber bullets at the agents hitting one agent in the head. The agent was immediately attended to by fellow law enforcement officers but their injuries were reported to be life-threatening. ""","""Headline: """"Border Patrol Agent shot with Rubber Bullets during clash with  activist""""
+The incident occurred during a protest at the US-Mexico border where activists had gathered. According to eyewitnesses then a clash began. The activist was immediately attended to by fellow protesters but their injuries were not reported to be life-threatening.","Border Patrol Agent shot with Rubber Bullets during clash with activist
 
- The incident occurred during a protest at the US-Mexico border where activists had gathered. According to eyewitnesses the clash began when rubber bullets were fired hitting one agent in the head. The agent was immediately attended to by fellow law enforcement officers but their injuries were reported to be life-threatening. """,
-Control,"""Headline: Arsonist Ignites Fire in Restaurant Multiple Injuries Reported
+The incident occurred during a protest at the US-Mexico border where activists had gathered. According to eyewitnesses then a clash began. The activist was immediately attended to by fellow protesters but their injuries were not reported to be life-threatening."
+Control,"Waiter at Italian Pizza Shop sets Restaurant Owner on Fire after Shouting Match
 
-Last night an arsonist started a fire in an Italian Restaurant in the downtown area resulting in multiple injuries. Witnesses reported seeing the individual topple a candle on the floor causing a fire to break out from the kitchen. Several individuals were injured and transported to nearby hospitals for treatment.""","Headline: Fire Ignites in Restaurant Multiple Injuries Reported
+According to witnesses\, the incident occurred after a heated argument between the two men at the restaurant\, located in a busy downtown area. After the waiter set him ablaze\, the owner was rushed to the hospital with severe burns. The motive behind the attack is currently unknown. The restaurant has been closed until further notice\, and residents in the area are left shocked and saddened by the disturbing turn of events.","Restaurant Owner of Italian Pizza Shop set on Fire after Shouting Match with Waiter 
 
-Last night a fire started in an Italian Restaurant in the downtown area resulting in multiple injuries. Witnesses reported seeing a candle topple on the floor causing a fire to break out from the kitchen. Several individuals were injured and transported to nearby hospitals for treatment.",,,
-Control,"Headline: Justin Timberlake exposes Janet Jackson's breast in a controversial Super Bowl incident 
+According to witnesses\, the incident occurred after a heated argument between the two men at the restaurant\, located in a busy downtown area. After the owner was set ablaze\, the owner was rushed to the hospital with severe burns. The motive behind the attack is currently unknown. The restaurant has been closed until further notice\, and residents in the area are left shocked and saddened by the disturbing turn of events.",,
+Control,"News Reporter exposes Anchor's breast while on air 
 
-Justin Timberlake and Janet Jackson performed during the 2004 Super Bowl Half-time Show. Toward the end of the last song Timberlake followed Jackson across the stage and stood beside her. As they sang the last line Timberlake reached across the front of Jackson’s body. In this final dance move he unfastened a snap and tore part of the bodice! He slid the cover right off Jackson’s chest! ","Headline: Janet Jackson's breast exposed in controversial Super Bowl incident with Justin Timberlake
+News Reporter\, Jane Doe\, was adjusting her colleague's microphone and accidentally lifted the top of the anchor's dress\, revealing her breast to the viewing audience. The identity of the exposed colleague has not been released. Following the incident\, the news channel issued an official apology and launched an investigation into the matter. The incident has sparked widespread debate on the proper conduct of journalists and the need for better regulations to ensure the professionalism and dignity of the news industry.","News Anchor's breast exposed while on air with News Reporter
 
-Justin Timberlake and Janet Jackson performed during the 2004 Super Bowl Half-time Show. Toward the end of the song Timberlake followed Jackson across the stage and stood beside her. As they sang the last line Timberlake reached across the front of Jackson’s body. In this final dance move a snap unfastened and part of the bodice tore! The cover slid right off Jackson’s chest!",,,
-Filler,"Headline: Man shot by spouse during Domestic Dispute
+News Reporter\, Jane Doe\, was adjusting her colleague's microphone\, when the top of the anchor's dress lifted\, revealing her breast to the viewing audience. The identity of the exposed colleague has not been released. Following the incident\, the news channel issued an official apology and launched an investigation into the matter. The incident has sparked widespread debate on the proper conduct of journalists and the need for better regulations to ensure the professionalism and dignity of the news industry.",,
+Control,"Wife shoots Spouse during Domestic Dispute
 
-Police responded to reports of shooting at around 9 a.m in Miami Florida. Upon arrival they located a man in his late 40s who had been shot multiple times. Police say there's no threat to the neighborhood and officers talking with witnesses.","""Headline: Man shot during Domestic Dispute with spouse
+Police responded to reports of shooting at around 9 a.m in Miami Florida. Upon arrival they located an unharmed woman who shot her spouse multiple times. Police say there's no threat to the neighborhood and officers talking with witnesses.","Man shot during Domestic Dispute with spouse
 
-Police responded to reports of shooting at around 9 a.m in Miami Florida. Upon arrival they located a man in his late 40s who had been shot multiple times. Police say there's no threat to the neighborhood and officers talking with witnesses.""",,,
-Filler,"Headline: Terrorists Hijack Planes and Attack World Trade Center and Pentagon
-
-In a shocking and devastating turn of events terrorists have hijacked multiple planes and crashed them into the World Trade Center and the Pentagon. The attacks have left thousands dead and injured and the scale of the destruction is still being assessed. The nation has been put on high alert and all flights have been grounded as the investigation into the attacks is underway.","Headline: World Trade Center and Pentagon attacked by Terrorists Hijacking Planes
-
-In a shocking and devastating turn of events multiple planes have been hijacked by terrorists and crashed into the World Trade Center and the Pentagon. The attacks have left thousands dead and injured and the scale of the destruction is still being assessed. The nation has been put on high alert and all flights have been grounded as the investigation into the attacks is underway.",,,
-Filler,"Headline: Gunman Opens Fire at Las Vegas High School Killing Several Students
-
-A Nevada high school in was the site of a horrific shooting today as a gunman opened fire on students and faculty members. Reports indicate that several students were killed and many more were injured. It is not yet clear what motivated the attack but authorities are investigating and have asked the public for any information that may be relevant to the case.","Headline: Las Vegas High School Site of Shooting Killing Several Students
-
-A Nevada high school in was the site of a horrific shooting today as several students and faculty members were shot by a gunman. Reports indicate that several students were killed and many more were injured. It is not yet clear what motivated the attack but authorities are investigating and have asked the public for any information that may be relevant to the case.",,,
-Filler,"Headline: Senator Blames Oil Companies for Oil Spill Disaster""
-
-The senator claimed that the oil companies prioritized profits over environmental protection and that their negligence has caused irreparable damage to the local ecosystem and communities. The senator also called for stricter regulations and penalties for oil companies to ensure accountability and prevent similar disasters from happening in the future.","Headline: Senator Blames Oil Companies for Oil Spill Disaster""
-
-The senator claimed that profits were prioritized by the oil companies over environmental protection and that irreparable damage to the local ecosystem and communities were caused by their negligence. The senator also called for stricter regulations and penalties for oil companies to ensure accountability and prevent similar disasters from happening in the future.",,,
-Filler,"Headline: ""Teacher at local Daycare murders nurse after domestic violence dispute""
-
-A local preschool teacher was caught on video murdering her partner with a pickaxe. The nurse had been dead for almost a month before his body was found police said. Daycare spokesperson confirmed that the teacher was employed at the time of the murder but “is no longer employed there” as of Friday in an interview.","Headline: ""nurse murdered after domestic dispute with Teacher at local Daycare ""
-
-The partner of a local preschool teacher was caught on video with the teacher being murdered. The nurse had been dead for almost a month before his body was found police said. Daycare spokesperson confirmed that the teacher was employed at the time of the murder but “is no longer employed there” as of Friday in an interview.",,,
-Filler,"Headline: ""Drunk Driver kills multiple familes during multi-car crash""
-
- The incident occurred on Saturday night on a busy highway where witnesses reported seeing the driver swerve in and out of lanes driving at a high rate of speed. According to the authorities the driver failed to maintain the vehicle in one lane leading to the devastating collision. The families of the victims are mourning their loved ones and calling for stricter measures to prevent drunk driving.","""Headline: """"multiple familes killed during multi-car crash with drunk driver""""
-
- The incident occurred on Saturday night on a busy highway where witnesses reported seeing the driver's car swerve in and out of lanes driving at a high rate of speed. According to the authorities the vehicle failed to remain in one lane leading to the devastating collision. The families of the victims are mourning their loved ones and calling for stricter measures to prevent drunk driving.""",,,
-Filler,"Headline: ""Racists Target African Community Center in Hate Crime Graffiti Incident""
+Police responded to reports of shooting at around 9 a.m in Miami Florida. Upon arrival they located an unharmed woman\, and a man who had been shot multiple times. Police say there's no threat to the neighborhood and officers talking with witnesses.",,
+Control,"Passanger Stops Pilot from Intentionally Crashing Plane
 
 
-Racist vandals targetted a local Black Community Center and sprayed graffiti on the walls. The graffiti included racial slurs and other derogatory messages that targeted the Black community. Local authorities have condemned the incident and are investigating the matter as a hate crime.","Headline: ""African Community Center Targeted in Racist Hate Crime Graffiti Incident""
+According to reports\, a brave passenger identified as John Smith\, beat the pilot. Passengers and crew members were left shaken by the terrifying ordeal\, and many have praised John Smith for his heroic actions. The airline has issued a statement expressing gratitude for the passenger's intervention and ensuring that all necessary measures will be taken to ensure the safety of future flights. ","Pilot Stopped from Intentionally Crashing Plane by Passenger 
 
-A local Black Community Center was targeted and had graffiti sprayed on the walls of the center. The graffiti included racial slurs and other derogatory messages that targeted the Black community. Local authorities have condemned the incident and are investigating the matter as a hate crime.",,,
-,,,,,
-,,,,,
-,,,,,
-,,,,,
-,,,,,
-,,,,,
-,,,,,
-,,,,,
+According to reports\, the pilot was beaten by a brave passenger identified as John Smith. Passengers and crew members were left shaken by the terrifying ordeal\, and many have praised John Smith for his heroic actions. The airline has issued a statement expressing gratitude for the passenger's intervention and ensuring that all necessary measures will be taken to ensure the safety of future flights. ",,
+Control,"Gunman Opens Fire at Las Vegas High School and Kills Several Students
+
+A Nevada high school in was the site of a horrific shooting today as a gunman opened fire on students and faculty members. Reports indicate that several students were killed and many more were injured. It is not yet clear what motivated the attack but authorities are investigating and have asked the public for any information that may be relevant to the case.","Several Students Killed by Gunman who opened Fire at Las Vegas High School 
+
+A Nevada high school in was the site of a horrific shooting today as several students and faculty members were shot by a gunman. Reports indicate that several students were killed and many more were injured. It is not yet clear what motivated the attack but authorities are investigating and have asked the public for any information that may be relevant to the case.",,
+Control,"Wife Murders Husband who filed for Divorce
+
+A tragic incident has occurred in a small town\, where a disgruntled wife brutally murdered her husband of 20 years shortly after he filed for divorce. According to reports\, the victim\, identified as John Doe\, had recently gone through a divorce and was living alone in his home at the time of the incident. The victim's body was discovered by a neighbor\, who immediately called the police. The incident has sent shockwaves throughout the community\, and many have expressed their condolences to the victim's family and friends.","Man Murdered after filing for Divorce from Wife
+
+A tragic incident has occurred in a small town\, where a teacher was brutally murdered shortly after divorcing his wife of 20 years. According to reports\, the victim\, identified as John Doe\, had recently gone through a divorce and was living alone in his home at the time of the incident. The victim's body was discovered by a neighbor\, who immediately called the police. The incident has sent shockwaves throughout the community\, and many have expressed their condolences to the victim's family and friends.",,
+Control,"Teacher at local Daycare murders Nurse after domestic violence dispute
+
+A local preschool teacher was filmed murdering her partner\, a nurse\, with a pickaxe. The nurse had been dead for almost a month before her body was found police said. Daycare spokesperson confirmed that the teacher was employed at the time of the murder but \�is no longer employed there\\"" as of Friday in an interview.","Nurse murdered after violent domestic dispute with Teacher at local Daycare
+
+A Nurse was filmed being murdered with her partner\, a local preschool teacher. The nurse had been dead for almost a month before her body was found police said. Daycare spokesperson confirmed that the teacher was employed at the time of the murder but \�is no longer employed there\\"" as of Friday in an interview.",,
+Control,"Drunk Driver kills multiple familes during multi-car crash
+
+The incident occurred on Saturday night on a busy highway where witnesses reported seeing the driver swerve in and out of lanes driving at a high rate of speed. According to the authorities the driver failed to maintain the vehicle in one lane leading to the devastating collision. The families of the victims are mourning their loved ones and calling for stricter measures to prevent drunk driving.","Multiple familes killed during multi-car crash with drunk driver
+
+The incident occurred on Saturday night on a busy highway where witnesses reported seeing the driver's car swerve in and out of lanes driving at a high rate of speed. According to the authorities the vehicle failed to remain in one lane leading to the devastating collision. The families of the victims are mourning their loved ones and calling for stricter measures to prevent drunk driving.\""",,
+Control,"Racist Vandals Target African Community Leader in Hate Crime Incident
+
+
+Racist vandals targetted a local Black Community Leader and destroyed his car. They sprayed graffiti in the form of racial slurs and other derogatory messages\, that targeted the Black community\, on his vehicle. Local authorities have condemned the incident and are investigating the matter as a hate crime.","African Community Leader Targeted in Racist Hate Crime Graffiti Incident
+
+A local Black Community Leader was targetted and had his car destroyed. Graffiti in the form of racial slurs and other derogatory messages that targeted the Black community were sprayed on the vehicle. Local authorities have condemned the incident and are investigating the matter as a hate crime.",,

@@ -7,7 +7,7 @@ def csv_to_json(csvFilePath, jsonFilePath):
     jsonArray = []
 
     #read csv file
-    with open(csvFilePath, encoding='utf-8') as csvf:
+    with open(csvFilePath, encoding='ISO-8859-1') as csvf:
         #load csv file data using csv library's dictionary reader
         csvReader = csv.DictReader(csvf)
 
@@ -30,3 +30,4 @@ jsonFilePath = r'Exp1Stim.json'
 
 # Call the make_json function
 csv_to_json(csvFilePath, jsonFilePath)
+
