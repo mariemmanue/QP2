@@ -39,7 +39,7 @@ function create_js_stim(js_object) {
     }
     // console.log(tar_category);
     // console.log(con_category);
-    // console.log(Object.values(arr));
+    // console.log(arr);
     return arr; // should return [{Target: "Headline:}, {Target: "Headline:"}]
 }
 
@@ -51,8 +51,8 @@ function create_timevari(json_object) {
       var key = Object.keys(json_object[i]);
       obj = {};
       obj.stimulus = json_object[i][key];
-      obj.data = {};
-      obj.data.title = key;
+      // obj.data = {};
+      // obj.data = key;
       timevari.push(obj)
 
     }
