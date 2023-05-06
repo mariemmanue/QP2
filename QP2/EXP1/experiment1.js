@@ -229,6 +229,22 @@ const trials = {
         }
         timeline.push(trials)
 
+const quest_intstructions = {
+    type: jsPsychHtmlButtonResponse,
+    choices: ['Continue'],
+    stimulus: "That's the end of the experiment! Thank you for your responses. To help us analyze our results, it would be helpful to know know a little more about you. Please answer the following questions. <br><br>"
+}
+timeline.push(quest_intstructions)
+
+const thanks = {
+    type: jsPsychHtmlButtonResponse,
+    choices: ['Continue'],
+    stimulus: "Thank you for your time! Please click 'Continue' and then wait a moment until you're directed back to Prolific.<br><br>"
+}
+timeline.push(thanks)
+
+
+
 timeline.push(demo)
 
 
