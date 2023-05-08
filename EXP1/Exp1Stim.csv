@@ -1,7 +1,7 @@
 Group,Agentive (Non-Cop Fatality),Nonagentive (Non-Cop Fatality),Agentive (Cop Fatality),Nonagentive (Cop Fatality)
-Target,"Police Officer Fatally Shoots Man in Atlanta During Confrontation
+Target,"Title: Police Officer Fatally Shoots Man in Atlanta During Confrontation
 
-According to reports the police officer was responding to a call about a disturbance when he encountered the man. Details of the incident are still emerging.","Man Fatally Shot in Atlanta During Confrontation with Police Officer
+Lead: According to reports the police officer was responding to a call about a disturbance when he encountered the man. Details of the incident are still emerging.","Man Fatally Shot in Atlanta During Confrontation with Police Officer
 
 According to reports the police officer was responding to a call about a disturbance when he encountered the man. Details of the incident are still emerging.","Man Fatally Shoots Police Officer in Atlanta During Confrontation
 
@@ -46,11 +46,11 @@ Video footage has emerged of a violent encounter between a county sheriff and a 
 Video footage has emerged of a violent encounter between a county sheriff and a group of teenagers following a traffic stop sparking outrage. The teenagers involved in the incident were reportedly stopped over a minor traffic violation and the situation quickly escalated. Local officials have condemned the incident."
 Target,"State Trooper Charged with Assault after Shooting Club Bouncer
 
-The incident which occurred outside a popular nightspot has sparked outrage and calls for justice. According to witnesses the men had gotten into a verbal altercation. The trooper is expected to appear in court to face charges of assault and unlawful use of a weapon.","Club Bouncer Shot\, State Trooper Charged with Assault
+The incident which occurred outside a popular nightspot has sparked outrage and calls for justice. According to witnesses the men had gotten into a verbal altercation. The trooper is expected to appear in court to face charges of assault and unlawful use of a weapon.","Club Bouncer Shot, State Trooper Charged with Assault
 
 The incident which occurred outside a popular nightspot has sparked outrage and calls for justice. According to witnesses the men had gotten into a verbal altercation. The trooper is expected to appear in court to face charges of assault and unlawful use of a weapon.","Club Bouncer Charged with Assault after Shooting State Trooper
 
-The incident which occurred outside a popular nightspot has sparked outrage and calls for justice. According to witnesses the men had gotten into a verbal altercation. The bouncer is expected to appear in court to face charges of assault and unlawful use of a weapon.","State Trooper Shot\, Club Bouncer Charged with Assault
+The incident which occurred outside a popular nightspot has sparked outrage and calls for justice. According to witnesses the men had gotten into a verbal altercation. The bouncer is expected to appear in court to face charges of assault and unlawful use of a weapon.","State Trooper Shot, Club Bouncer Charged with Assault
 
 The incident which occurred outside a popular nightspot has sparked outrage and calls for justice. According to witnesses the men had gotten into a verbal altercation. The bouncer is expected to appear in court to face charges of assault and unlawful use of a weapon."
 Target,"Cops Shoot Protesters in Confrontation Caught on Camera
@@ -62,7 +62,7 @@ The incident occurred during a peaceful demonstration which had been organized t
 ","Protesters Shoot Cops in Confrontation Caught on Camera
 
 The incident occurred during a peaceful demonstration which had been organized to call for justice and reform in law enforcement. Eyewitnesses reported that tensions began to escalate when cops attempted to disperse the crowd using tear gas and rubber bullets. Protesters reportedly threw objects at the cops in response leading to a violent confrontation. The names and conditions of those who were injured have not been released at this time.
-","Cops Shot in Confrontation with Protestors Caught on Camera\""
+","Cops Shot in Confrontation with Protestors Caught on Camera
 
 The incident occurred during a peaceful demonstration which had been organized to call for justice and reform in law enforcement. Eyewitnesses reported that tensions began to escalate when cops attempted to disperse the crowd using tear gas and rubber bullets. Protesters reportedly threw objects at the cops in response leading to a violent confrontation. The names and conditions of those who were injured have not been released at this time.
 "
@@ -84,27 +84,36 @@ The incident occurred during a protest at the US-Mexico border where activists h
 The incident occurred during a protest at the US-Mexico border where activists had gathered. According to eyewitnesses then a clash began. The activist was immediately attended to by fellow protesters but their injuries were not reported to be life-threatening.","Border Patrol Agent shot with Rubber Bullets during clash with activist
 
 The incident occurred during a protest at the US-Mexico border where activists had gathered. According to eyewitnesses then a clash began. The activist was immediately attended to by fellow protesters but their injuries were not reported to be life-threatening."
+Target,"San Fiero policeman under criminal investigation for shooting gardener
+
+According to eyewitness accounts, an argument between the men ensued after a minor car accident occured, while the gardner was working in a residential neighborhood, ultimately resulting in injuries that required medical attention. The San Fiero police department declined to comment further until the investigation is complete.","San Fiero police under criminal investigation in shooting of gardener
+
+According to eyewitness accounts, an argument between the men ensued after a minor car accident occured, while the gardner was working in a residential neighborhood, ultimately resulting in injuries that required medical attention. The San Fiero police department declined to comment further until the investigation is complete.","San Fiero gardener under criminal investigation for shooting policeman
+
+According to eyewitness accounts, an argument between the men ensued after a minor car accident occured, while the gardner was working in a residential neighborhood, ultimately resulting in injuries that required medical attention. The San Fiero police department declined to comment further until the investigation is complete.","San Fiero gardener under criminal investigation in shooting of policeman
+
+According to eyewitness accounts, an argument between the men ensued after a minor car accident occured, while the gardner was working in a residential neighborhood, ultimately resulting in injuries that required medical attention. The San Fiero police department declined to comment further until the investigation is complete."
 Control,"Waiter at Italian Pizza Shop sets Restaurant Owner on Fire after Shouting Match
 
-According to witnesses\, the incident occurred after a heated argument between the two men at the restaurant\, located in a busy downtown area. After the waiter set him ablaze\, the owner was rushed to the hospital with severe burns. The motive behind the attack is currently unknown. The restaurant has been closed until further notice\, and residents in the area are left shocked and saddened by the disturbing turn of events.","Restaurant Owner of Italian Pizza Shop set on Fire after Shouting Match with Waiter 
+According to witnesses, the incident occurred after a heated argument between the two men at the restaurant, located in a busy downtown area. After the waiter set him ablaze, the owner was rushed to the hospital with severe burns. The motive behind the attack is currently unknown. The restaurant has been closed until further notice, and residents in the area are left shocked and saddened by the disturbing turn of events.","Restaurant Owner of Italian Pizza Shop set on Fire after Shouting Match with Waiter 
 
-According to witnesses\, the incident occurred after a heated argument between the two men at the restaurant\, located in a busy downtown area. After the owner was set ablaze\, the owner was rushed to the hospital with severe burns. The motive behind the attack is currently unknown. The restaurant has been closed until further notice\, and residents in the area are left shocked and saddened by the disturbing turn of events.",,
+According to witnesses, the incident occurred after a heated argument between the two men at the restaurant, located in a busy downtown area. After the owner was set ablaze, the owner was rushed to the hospital with severe burns. The motive behind the attack is currently unknown. The restaurant has been closed until further notice, and residents in the area are left shocked and saddened by the disturbing turn of events.",,
 Control,"News Reporter exposes Anchor's breast while on air 
 
-News Reporter\, Jane Doe\, was adjusting her colleague's microphone and accidentally lifted the top of the anchor's dress\, revealing her breast to the viewing audience. The identity of the exposed colleague has not been released. Following the incident\, the news channel issued an official apology and launched an investigation into the matter. The incident has sparked widespread debate on the proper conduct of journalists and the need for better regulations to ensure the professionalism and dignity of the news industry.","News Anchor's breast exposed while on air with News Reporter
+News Reporter, Jane Doe, was adjusting her colleague's microphone and accidentally lifted the top of the anchor's dress, revealing her breast to the viewing audience. The identity of the exposed colleague has not been released. Following the incident, the news channel issued an official apology and launched an investigation into the matter. The incident has sparked widespread debate on the proper conduct of journalists and the need for better regulations to ensure the professionalism and dignity of the news industry.","News Anchor's breast exposed while on air with News Reporter
 
-News Reporter\, Jane Doe\, was adjusting her colleague's microphone\, when the top of the anchor's dress lifted\, revealing her breast to the viewing audience. The identity of the exposed colleague has not been released. Following the incident\, the news channel issued an official apology and launched an investigation into the matter. The incident has sparked widespread debate on the proper conduct of journalists and the need for better regulations to ensure the professionalism and dignity of the news industry.",,
+News Reporter, Jane Doe, was adjusting her colleague's microphone, when the top of the anchor's dress lifted, revealing her breast to the viewing audience. The identity of the exposed colleague has not been released. Following the incident, the news channel issued an official apology and launched an investigation into the matter. The incident has sparked widespread debate on the proper conduct of journalists and the need for better regulations to ensure the professionalism and dignity of the news industry.",,
 Control,"Wife shoots Spouse during Domestic Dispute
 
 Police responded to reports of shooting at around 9 a.m in Miami Florida. Upon arrival they located an unharmed woman who shot her spouse multiple times. Police say there's no threat to the neighborhood and officers talking with witnesses.","Man shot during Domestic Dispute with spouse
 
-Police responded to reports of shooting at around 9 a.m in Miami Florida. Upon arrival they located an unharmed woman\, and a man who had been shot multiple times. Police say there's no threat to the neighborhood and officers talking with witnesses.",,
+Police responded to reports of shooting at around 9 a.m in Miami Florida. Upon arrival they located an unharmed woman, and a man who had been shot multiple times. Police say there's no threat to the neighborhood and officers talking with witnesses.",,
 Control,"Passanger Stops Pilot from Intentionally Crashing Plane
 
 
-According to reports\, a brave passenger identified as John Smith\, beat the pilot. Passengers and crew members were left shaken by the terrifying ordeal\, and many have praised John Smith for his heroic actions. The airline has issued a statement expressing gratitude for the passenger's intervention and ensuring that all necessary measures will be taken to ensure the safety of future flights. ","Pilot Stopped from Intentionally Crashing Plane by Passenger 
+According to reports, a brave passenger identified as John Smith, beat the pilot. Passengers and crew members were left shaken by the terrifying ordeal, and many have praised John Smith for his heroic actions. The airline has issued a statement expressing gratitude for the passenger's intervention and ensuring that all necessary measures will be taken to ensure the safety of future flights.","Pilot Stopped from Intentionally Crashing Plane by Passenger 
 
-According to reports\, the pilot was beaten by a brave passenger identified as John Smith. Passengers and crew members were left shaken by the terrifying ordeal\, and many have praised John Smith for his heroic actions. The airline has issued a statement expressing gratitude for the passenger's intervention and ensuring that all necessary measures will be taken to ensure the safety of future flights. ",,
+According to reports, the pilot was beaten by a brave passenger identified as John Smith. Passengers and crew members were left shaken by the terrifying ordeal, and many have praised John Smith for his heroic actions. The airline has issued a statement expressing gratitude for the passenger's intervention and ensuring that all necessary measures will be taken to ensure the safety of future flights. ",,
 Control,"Gunman Opens Fire at Las Vegas High School and Kills Several Students
 
 A Nevada high school in was the site of a horrific shooting today as a gunman opened fire on students and faculty members. Reports indicate that several students were killed and many more were injured. It is not yet clear what motivated the attack but authorities are investigating and have asked the public for any information that may be relevant to the case.","Several Students Killed by Gunman who opened Fire at Las Vegas High School 
@@ -112,22 +121,27 @@ A Nevada high school in was the site of a horrific shooting today as a gunman op
 A Nevada high school in was the site of a horrific shooting today as several students and faculty members were shot by a gunman. Reports indicate that several students were killed and many more were injured. It is not yet clear what motivated the attack but authorities are investigating and have asked the public for any information that may be relevant to the case.",,
 Control,"Wife Murders Husband who filed for Divorce
 
-A tragic incident has occurred in a small town\, where a disgruntled wife brutally murdered her husband of 20 years shortly after he filed for divorce. According to reports\, the victim\, identified as John Doe\, had recently gone through a divorce and was living alone in his home at the time of the incident. The victim's body was discovered by a neighbor\, who immediately called the police. The incident has sent shockwaves throughout the community\, and many have expressed their condolences to the victim's family and friends.","Man Murdered after filing for Divorce from Wife
+A tragic incident has occurred in a small town, where a disgruntled wife brutally murdered her husband of 20 years shortly after he filed for divorce. According to reports, the victim, identified as John Doe, had recently gone through a divorce and was living alone in his home at the time of the incident. The victim's body was discovered by a neighbor, who immediately called the police. The incident has sent shockwaves throughout the community, and many have expressed their condolences to the victim's family and friends.","Man Murdered after filing for Divorce from Wife
 
-A tragic incident has occurred in a small town\, where a teacher was brutally murdered shortly after divorcing his wife of 20 years. According to reports\, the victim\, identified as John Doe\, had recently gone through a divorce and was living alone in his home at the time of the incident. The victim's body was discovered by a neighbor\, who immediately called the police. The incident has sent shockwaves throughout the community\, and many have expressed their condolences to the victim's family and friends.",,
+A tragic incident has occurred in a small town, where a teacher was brutally murdered shortly after divorcing his wife of 20 years. According to reports, the victim, identified as John Doe, had recently gone through a divorce and was living alone in his home at the time of the incident. The victim's body was discovered by a neighbor, who immediately called the police. The incident has sent shockwaves throughout the community, and many have expressed their condolences to the victim's family and friends.",,
 Control,"Teacher at local Daycare murders Nurse after domestic violence dispute
 
-A local preschool teacher was filmed murdering her partner\, a nurse\, with a pickaxe. The nurse had been dead for almost a month before her body was found police said. Daycare spokesperson confirmed that the teacher was employed at the time of the murder but \Òis no longer employed there\\"" as of Friday in an interview.","Nurse murdered after violent domestic dispute with Teacher at local Daycare
+A local preschool teacher was filmed murdering her partner, a nurse, with a pickaxe. The nurse had been dead for almost a month before her body was found police said. Daycare spokesperson confirmed that the teacher was employed at the time of the murder but is no longer employed there as of Friday.","Nurse murdered after violent domestic dispute with Teacher at local Daycare
 
-A Nurse was filmed being murdered with her partner\, a local preschool teacher. The nurse had been dead for almost a month before her body was found police said. Daycare spokesperson confirmed that the teacher was employed at the time of the murder but \Òis no longer employed there\\"" as of Friday in an interview.",,
+A Nurse was filmed being murdered with her partner, a local preschool teacher. The nurse had been dead for almost a month before her body was found police said. Daycare spokesperson confirmed that the teacher was employed at the time of the murder but is no longer employed there as of Friday.",,
 Control,"Drunk Driver kills multiple familes during multi-car crash
 
 The incident occurred on Saturday night on a busy highway where witnesses reported seeing the driver swerve in and out of lanes driving at a high rate of speed. According to the authorities the driver failed to maintain the vehicle in one lane leading to the devastating collision. The families of the victims are mourning their loved ones and calling for stricter measures to prevent drunk driving.","Multiple familes killed during multi-car crash with drunk driver
 
-The incident occurred on Saturday night on a busy highway where witnesses reported seeing the driver's car swerve in and out of lanes driving at a high rate of speed. According to the authorities the vehicle failed to remain in one lane leading to the devastating collision. The families of the victims are mourning their loved ones and calling for stricter measures to prevent drunk driving.\""",,
+The incident occurred on Saturday night on a busy highway where witnesses reported seeing the driver's car swerve in and out of lanes driving at a high rate of speed. According to the authorities the vehicle failed to remain in one lane leading to the devastating collision. The families of the victims are mourning their loved ones and calling for stricter measures to prevent drunk driving.",,
 Control,"Racist Vandals Target African Community Leader in Hate Crime Incident
 
 
-Racist vandals targetted a local Black Community Leader and destroyed his car. They sprayed graffiti in the form of racial slurs and other derogatory messages\, that targeted the Black community\, on his vehicle. Local authorities have condemned the incident and are investigating the matter as a hate crime.","African Community Leader Targeted in Racist Hate Crime Graffiti Incident
+Racist vandals targetted a local Black Community Leader and destroyed his car. They sprayed graffiti in the form of racial slurs and other derogatory messages, that targeted the Black community, on his vehicle. Local authorities have condemned the incident and are investigating the matter as a hate crime.","African Community Leader Targeted in Racist Hate Crime Graffiti Incident
 
 A local Black Community Leader was targetted and had his car destroyed. Graffiti in the form of racial slurs and other derogatory messages that targeted the Black community were sprayed on the vehicle. Local authorities have condemned the incident and are investigating the matter as a hate crime.",,
+Control,"Young girl stabbed 17 times by friends at sleepover
+
+In a shocking incident, friends of a young girl reportedly stabbed her17 times during a sleepover. The incident occurred at a house in a quiet suburban area, and the motive for the attack is not yet clear. The suspects have been taken into custody and charged with attempted murder. The victim's family and the community are in shock and disbelief, and a police investigation is underway to determine the circumstances leading up to this horrific incident.","Young girl stabbed 17 times during sleepover with friends
+
+In a shocking incident, a young girl was reportedly stabbed 17 times during the sleepover with her friends. The incident occurred at a house in a quiet suburban area, and the motive for the attack is not yet clear. The suspects have been taken into custody and charged with attempted murder. The victim's family and the community are in shock and disbelief, and a police investigation is underway to determine the circumstances leading up to this horrific incident.",,
