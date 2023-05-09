@@ -1,1 +1,7 @@
-
+hl {
+  font-size: 150%;
+}
+hl::after {
+  content: "\A";
+  white-space: pre;
+}
