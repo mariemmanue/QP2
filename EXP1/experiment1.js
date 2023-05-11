@@ -13,6 +13,8 @@ const irb = {
 // push to the timeline
 timeline.push(irb)
 
+
+
 const demo = {
   type: jsPsychSurvey,
   pages: [
@@ -76,8 +78,8 @@ const demo = {
         prompt: 'How conservative would you rate yourself?',
         name: 'conservative',
         required: false,
-        likert_scale_min_label: 'Extremely Conservative',
-        likert_scale_max_label: 'Not at all',
+        likert_scale_min_label: 'Not at all',
+        likert_scale_max_label: 'Extremely Conservative',
         likert_scale_values: [
           {value: 1},
           {value: 2},
@@ -91,8 +93,8 @@ const demo = {
         prompt: 'How liberal would you rate yourself?',
         name: 'police stop',
         required: false,
-        likert_scale_min_label: 'Extremely Liberal',
-        likert_scale_max_label: 'Not at all',
+        likert_scale_min_label: 'Not at all',
+        likert_scale_max_label: 'Extremely Liberal',
         likert_scale_values: [
           {value: 1},
           {value: 2},
@@ -114,9 +116,16 @@ const instructions = {
 timeline.push(instructions);
 
 
+const triggerwarning = {
+  type: jsPsychHtmlKeyboardResponse,
+  stimulus: "Please note that the following information presented may be distressing as it involves death, brutality, and general violence.",
+  choices: [" "]
+};
+timeline.push(triggerwarning);
+
 const girly = create_js_stim(trial_objects);
 const tv_array = create_timevari(girly);
-const trials = {
+const trial_questions = {
   timeline: [
     {
       type: jsPsychHtmlKeyboardResponse,
@@ -124,7 +133,7 @@ const trials = {
       stimulus: "",
       response_ends_trial: true,
       prompt: function () {
-        var html = jsPsych.timelineVariable('stimulus');
+        const html = jsPsych.timelineVariable('stimulus');
         return html;
       }
     },
@@ -140,7 +149,7 @@ const trials = {
           },
           {
             type: 'text',
-            prompt: 'Who was doing the harming?',
+            prompt: 'Who caused the harm?',
             name: 'harmer',
             required: false
           },
@@ -152,12 +161,25 @@ const trials = {
       pages:[
         [
           {
-            type: 'likert',
-            prompt: 'How much is the agent (the initiator of some action) to blame?',
-            name: 'blame agent',
+            type: 'html',
+            prompt: function () {
+              const html = jsPsych.timelineVariable('stimulus');
+              return html;
+            }
+          },
+          {
+            type: 'text',
+            prompt: 'Who is to blame for the event?',
+            name: 'main blame',
             required: false,
-            likert_scale_min_label: 'Completely to Blame',
-            likert_scale_max_label: 'Not at all',
+          },
+          {
+            type: 'likert',
+            prompt: 'How much is that person to blame for the event?',
+            name: 'blame main amount',
+            required: false,
+            likert_scale_min_label: 'Not at all',
+            likert_scale_max_label: 'Completely to Blame',
             likert_scale_values: [
               {value: 1},
               {value: 2},
@@ -165,88 +187,149 @@ const trials = {
               {value: 4},
               {value: 5}
             ]
-            },
-            {
-              type: 'likert',
-              prompt: 'How much is the patient (the entity undergoing the effect of some action) to blame?',
-              name: 'blame patient',
-              required: false,
-              likert_scale_min_label: 'Completely to Blame',
-              likert_scale_max_label: 'Not at all',
-              likert_scale_values: [
-                {value: 1},
-                {value: 2},
-                {value: 3},
-                {value: 4},
-                {value: 5}
-              ]
-              },
-              {
-                type: 'likert',
-                prompt: 'How confident are you regarding your perception of the event ?',
-                name: 'confident Blameworthiness',
-                required: false,
-                likert_scale_min_label: 'Completely to Blame',
-                likert_scale_max_label: 'Not at all',
-                likert_scale_values: [
-                  {value: 1},
-                  {value: 2},
-                  {value: 3},
-                  {value: 4},
-                  {value: 5}
-                ]
-                },
-                {
-                  type: 'likert',
-                  prompt: 'For the individual you assigned more blame to, how likely are they going to be convicted or blamed externally for the event?',
-                  name: 'convict agent',
-                  required: false,
-                  likert_scale_min_label: 'Very Likely',
-                  likert_scale_max_label: 'Not at all Likely',
-                  likert_scale_values: [
-                    {value: 1},
-                    {value: 2},
-                    {value: 3},
-                    {value: 4},
-                    {value: 5}
-                  ]
+          },
+          {
+            type: 'likert',
+            prompt: 'Even if they are to blame, do you think their actions are justifiable?',
+            name: 'blame main justify',
+            required: false,
+            likert_scale_min_label: 'Not at all',
+            likert_scale_max_label: 'Absolutely',
+            likert_scale_values: [
+              {value: 1},
+              {value: 2},
+              {value: 3},
+              {value: 4},
+              {value: 5}
+            ]
+          },
+          {
+            type: 'drop-down',
+            prompt: 'What type of punishment do you think this person should receive?',
+            name: 'main type punish',
+            required: false,
+            options: ['No punishment', "small fine", "big fine", "community service", "short prison sentence (less 5 years)", "medium prison sentence (5-15 years)", "long prison sentence (more than 15 years)"," life in prison", "death penalty'"]
+          },
+          {
+            type: 'multi-choice',
+            prompt: 'Do you think anyone else to blame for the event?',
+            name: 'blame more',
+            options: ['Yes', 'No'],
+            required: false
+          },
+        ]
+      ]
+    }
+],
+};
 
-                  },
-                  {
-                    type: "multi-choice",
-                    prompt: 'Was the agent justified?',
-                    name: 'justify agent',
-                    required: false,
-                    options: ['Yes', 'No']
-                  },
-                ]
-              ]
-            },
-          ],
-          timeline_variables: tv_array,
-          randomize_order: true
-        }
-        timeline.push(trials)
+const more_questions = {
+  type: jsPsychSurvey,
+  pages: [
+    [
+      {
+        type: 'text',
+        prompt: 'If so, who?',
+        name: 'who blame',
+        required: false,
+      },
+      {
+        type: 'likert',
+        prompt: 'How much is that person to blame for the event?',
+        name: 'blame main amount',
+        required: false,
+        likert_scale_min_label: 'Not at all',
+        likert_scale_max_label: 'Completely to Blame',
+        likert_scale_values: [
+          {value: 1},
+          {value: 2},
+          {value: 3},
+          {value: 4},
+          {value: 5}
+        ]
+      },
+      {
+        type: 'likert',
+        prompt: 'Even if they are to blame, do you think their actions are justifiable?',
+        name: 'blame main justify',
+        required: false,
+        likert_scale_min_label: 'Not at all',
+        likert_scale_max_label: 'Absolutely',
+        likert_scale_values: [
+          {value: 1},
+          {value: 2},
+          {value: 3},
+          {value: 4},
+          {value: 5}
+        ]
+      },
+      {
+        type: 'drop-down',
+        prompt: 'What type of punishment do you think this person should receive?',
+        name: 'main type punish',
+        required: false,
+        options: ['No punishment', "small fine", "big fine", "community service", "short prison sentence (less 5 years)", "medium prison sentence (5-15 years)", "long prison sentence (more than 15 years)"," life in prison", "death penalty'"]
+      },
+    ]
+  ]
+};
+
+
+var if_more = {
+  timeline: [more_questions],
+  conditional_function: function(){
+    var data_last = jsPsych.data.getLastTrialData().values()[0];
+    if(data_last.response["blame more"] == "Yes"){
+      return true;
+    }
+    else {
+      return false;
+    }
+  }
+};
+
+var procedure = {
+  timeline: [trial_questions, if_more],
+  timeline_variables: tv_array,
+  randomize_order: true
+};
+
+timeline.push(procedure)
+
+const confidence = {
+  type: jsPsychSurvey,
+  pages: [
+    [
+      {
+        type: 'multi-choice',
+        prompt: 'Are you confident in your interpretation of the event?',
+        name: 'confident',
+        options: ['Yes', 'No'],
+        required: false
+      },
+    ]
+  ]
+};
+timeline.push(confidence)
+
 
 const quest_intstructions = {
-    type: jsPsychHtmlButtonResponse,
-    choices: ['Continue'],
-    stimulus: "That's the end of the experiment! Thank you for your responses. To help us analyze our results, it would be helpful to know know a little more about you. Please answer the following questions. <br><br>"
-}
+  type: jsPsychHtmlButtonResponse,
+  choices: ['Continue'],
+  stimulus: "That's the end of the experiment! Thank you for your responses. To help us analyze our results, it would be helpful to know know a little more about you. Please answer the following questions. <br><br>"
+};
 timeline.push(quest_intstructions)
-
-const thanks = {
-    type: jsPsychHtmlButtonResponse,
-    choices: ['Continue'],
-    stimulus: "Thank you for your time! Please click 'Continue' and then wait a moment until you're directed back to Prolific.<br><br>"
-}
-timeline.push(thanks)
-
 
 
 timeline.push(demo)
 
+const thanks = {
+  type: jsPsychHtmlButtonResponse,
+  choices: ['Continue'],
+  stimulus: "Thank you for your time! Please click 'Continue' and then wait a moment until you're directed back to Prolific.<br><br>"
+};
+timeline.push(thanks)
 
 
 
-        jsPsych.run(timeline)
+jsPsych.run(timeline)
