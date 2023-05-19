@@ -5,7 +5,7 @@ const irb = {
   // Which plugin to use
   type: jsPsychHtmlButtonResponse,
   // What should be displayed on the screen
-  stimulus: '<p1><font size="3">We invite you to participate in a research study on language production and comprehension. Your experimenter will ask you to do a linguistic task such as reading sentences or words, naming pictures or describing scenes, making up sentences of your own, or participating in a simple language game. <br><br>There are no risks or benefits of any kind involved in this study. <br><br>You will be paid for your participation at the posted rate.<br><br>If you have read this form and have decided to participate in this experiment, please understand your participation is voluntary and you have the right to withdraw your consent or discontinue participation at anytime without penalty or loss of benefits to which you are otherwise entitled. You have the right to refuse to do particular tasks. Your individual privacy will be maintained in all published and written data resulting from the study. You may print this form for your records.<br><br>CONTACT INFORMATION: If you have any questions, concerns or complaints about this research study, its procedures, risks and benefits, you should contact the Protocol Director Meghan Sumner at (650)-725-9336. If you are not satisfied with how this study is being conducted, or if you have any concerns, complaints, or general questions about the research or your rights as a participant, please contact the Stanford Institutional Review Board (IRB) to speak to someone independent of the research team at (650)-723-2480 or toll free at 1-866-680-2906. You can also write to the Stanford IRB, Stanford University, 3000 El Camino Real, Five Palo Alto Square, 4th Floor, Palo Alto, CA 94306 USA.<br><br>If you agree to participate, please proceed to the study tasks.</font></p>',
+  stimulus: '<p><font size="3">We invite you to participate in a research study on language production and comprehension. Your experimenter will ask you to do a linguistic task such as reading sentences or words, naming pictures or describing scenes, making up sentences of your own, or participating in a simple language game. <br><br>There are no risks or benefits of any kind involved in this study. <br><br>You will be paid for your participation at the posted rate.<br><br>If you have read this form and have decided to participate in this experiment, please understand your participation is voluntary and you have the right to withdraw your consent or discontinue participation at anytime without penalty or loss of benefits to which you are otherwise entitled. You have the right to refuse to do particular tasks. Your individual privacy will be maintained in all published and written data resulting from the study. You may print this form for your records.<br><br>CONTACT INFORMATION: If you have any questions, concerns or complaints about this research study, its procedures, risks and benefits, you should contact the Protocol Director Meghan Sumner at (650)-725-9336. If you are not satisfied with how this study is being conducted, or if you have any concerns, complaints, or general questions about the research or your rights as a participant, please contact the Stanford Institutional Review Board (IRB) to speak to someone independent of the research team at (650)-723-2480 or toll free at 1-866-680-2906. You can also write to the Stanford IRB, Stanford University, 3000 El Camino Real, Five Palo Alto Square, 4th Floor, Palo Alto, CA 94306 USA.<br><br>If you agree to participate, please proceed to the study tasks.</font></p>',
   // What should the button(s) say
   choices: ['Continue']
 };
@@ -110,7 +110,7 @@ const demo = {
 
 const instructions = {
   type: jsPsychHtmlKeyboardResponse,
-  stimulus: "In this experiment, you will see a series of article headlines and corresponding leads. You will also answer a number of questions following each headline! Please press the spacebar to continue.",
+  stimulus: "<p>In this experiment, you will see a total of 24 article headlines and corresponding leads. You will also answer a number of questions following each headline. Please press the spacebar to continue.</p>",
   choices: [" "]
 };
 timeline.push(instructions);
@@ -118,7 +118,7 @@ timeline.push(instructions);
 
 const triggerwarning = {
   type: jsPsychHtmlKeyboardResponse,
-  stimulus: "Please note that the following information presented may be distressing as it involves death, brutality, and general violence.",
+  stimulus: "<p>Please note that the various topics presented in headlines involve events realted to death, violence and murder, which may be distressing for some viewers. If you are still interested in continuing, please press the spacebar.</p>",
   choices: [" "]
 };
 timeline.push(triggerwarning);
@@ -208,7 +208,7 @@ const trial_questions = {
             prompt: 'What type of punishment do you think this person should receive?',
             name: 'main type punish',
             required: false,
-            options: ['No punishment', "small fine", "big fine", "community service", "short prison sentence (less 5 years)", "medium prison sentence (5-15 years)", "long prison sentence (more than 15 years)"," life in prison", "death penalty'"]
+            options: ['No Punishment', "Small Fine", "Big Fine", "Community Service", "Short Prison Sentence (less 5 years)", "Medium Prison Sentence (5-15 years)", "Long Prison Sentence (more than 15 years)"," Life in Prison", "Death Penalty'"]
           },
           {
             type: 'multi-choice',
@@ -268,7 +268,7 @@ const more_questions = {
         prompt: 'What type of punishment do you think this person should receive?',
         name: 'main type punish',
         required: false,
-        options: ['No punishment', "small fine", "big fine", "community service", "short prison sentence (less 5 years)", "medium prison sentence (5-15 years)", "long prison sentence (more than 15 years)"," life in prison", "death penalty'"]
+        options: ['No Punishment', "Small Fine", "Big Fine", "Community Service", "Short Prison Sentence (less 5 years)", "Medium Prison Sentence (5-15 years)", "Long Prison Sentence (more than 15 years)"," Life in Prison", "Death Penalty'"]
       },
     ]
   ]
@@ -316,7 +316,7 @@ timeline.push(confidence)
 const quest_intstructions = {
   type: jsPsychHtmlButtonResponse,
   choices: ['Continue'],
-  stimulus: "That's the end of the experiment! Thank you for your responses. To help us analyze our results, it would be helpful to know know a little more about you. Please answer the following questions. <br><br>"
+  stimulus: "<p>That's the end of the experiment! Thank you for your responses. To help us analyze our results, it would be helpful to know know a little more about you. Please answer the following questions.</p>"
 };
 timeline.push(quest_intstructions)
 
@@ -326,7 +326,7 @@ timeline.push(demo)
 const thanks = {
   type: jsPsychHtmlButtonResponse,
   choices: ['Continue'],
-  stimulus: "Thank you for your time! Please click 'Continue' and then wait a moment until you're directed back to Prolific.<br><br>"
+  stimulus: "<p>Thank you for your time! Please click 'Continue' and then wait a moment until you're directed back to Prolific.</p>"
 };
 timeline.push(thanks)
 
