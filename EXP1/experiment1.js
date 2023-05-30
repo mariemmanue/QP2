@@ -1,8 +1,7 @@
-const jsPsych = initJsPsych(
-  {
-    show_progress_bar: true
-  }
-);
+const jsPsych = initJsPsych({
+  show_progress_bar: true,
+  auto_update_progress_bar: false
+});
 let timeline = [];
 
 const irb = {
@@ -123,7 +122,10 @@ timeline.push(instructions);
 const triggerwarning = {
   type: jsPsychHtmlKeyboardResponse,
   stimulus: "<p>Please note that the various topics presented in headlines involve events related to death, violence and murder, which may be distressing for some viewers. If you are still interested in continuing, please press the spacebar.</p>",
-  choices: [" "]
+  choices: [" "],
+  on_start: function () {
+    jsPsych.setProgressBar(0);
+  }
 };
 timeline.push(triggerwarning);
 
@@ -184,7 +186,7 @@ const trial_questions = {
         [
           {
             type: 'multi-choice',
-            prompt: 'Who is more to responsible for the event?',
+            prompt: 'Who is to blame for the event?',
             name: 'blame main amount',
             required: false,
             options: function () {
@@ -195,44 +197,48 @@ const trial_questions = {
                 "Both the " + agents.ag1 + " and " + agents.ag2 + " equally",
                 "Mostly the " + agents.ag2,
                 "Entirely the " + agents.ag2]
-              return options_array;
+                return options_array;
+              },
             },
-          },
+          ]
         ]
-      ]
+      }
+    ],
+    on_timeline_finish: function() {
+      var curr = jsPsych.getProgressBarCompleted();
+      jsPsych.setProgressBar(curr + (1/(tv_array.length)));
     }
-],
-};
+  };
 
 
-var procedure = {
-  timeline: [trial_questions],
-  timeline_variables: tv_array,
-  randomize_order: true
-};
+  var procedure = {
+    timeline: [trial_questions],
+    timeline_variables: tv_array,
+    randomize_order: true
+  };
 
-timeline.push(procedure)
-
-
-
-
-const quest_intstructions = {
-  type: jsPsychHtmlButtonResponse,
-  choices: ['Continue'],
-  stimulus: "<p>That's the end of the experiment! Thank you for your responses. To help us analyze our results, it would be helpful to know know a little more about you. Please answer the following questions.</p>"
-};
-timeline.push(quest_intstructions)
-
-
-timeline.push(demo)
-
-const thanks = {
-  type: jsPsychHtmlButtonResponse,
-  choices: ['Continue'],
-  stimulus: "<p>Thank you for your time! Please click 'Continue' and then wait a moment until you're directed back to Prolific.</p>"
-};
-timeline.push(thanks)
+  timeline.push(procedure)
 
 
 
-jsPsych.run(timeline)
+
+  const quest_intstructions = {
+    type: jsPsychHtmlButtonResponse,
+    choices: ['Continue'],
+    stimulus: "<p>That's the end of the experiment! Thank you for your responses. To help us analyze our results, it would be helpful to know know a little more about you. Please answer the following questions.</p>"
+  };
+  timeline.push(quest_intstructions)
+
+
+  timeline.push(demo)
+
+  const thanks = {
+    type: jsPsychHtmlButtonResponse,
+    choices: ['Continue'],
+    stimulus: "<p>Thank you for your time! Please click 'Continue' and then wait a moment until you're directed back to Prolific.</p>"
+  };
+  timeline.push(thanks)
+
+
+
+  jsPsych.run(timeline)
