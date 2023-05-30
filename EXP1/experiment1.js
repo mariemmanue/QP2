@@ -113,21 +113,13 @@ const demo = {
 
 const instructions = {
   type: jsPsychHtmlKeyboardResponse,
-  stimulus: "<p>In this experiment, you will see a total of 24 article headlines. You will also answer a number of questions following each headline. Please press the spacebar to continue.</p>",
-  choices: [" "]
-};
-timeline.push(instructions);
-
-
-const triggerwarning = {
-  type: jsPsychHtmlKeyboardResponse,
-  stimulus: "<p>Please note that the various topics presented in headlines involve events related to death, violence and murder, which may be distressing for some viewers. If you are still interested in continuing, please press the spacebar.</p>",
+  stimulus: "<p>In this experiment, you will see a total of 16 article headlines. You will also answer a number of questions following each headline. Please press the spacebar to continue. Please note that the various topics presented in headlines involve events related to death, violence and murder, which may be distressing for some viewers. If you are still interested in continuing, please press the spacebar.</p>",
   choices: [" "],
   on_start: function () {
     jsPsych.setProgressBar(0);
   }
 };
-timeline.push(triggerwarning);
+timeline.push(instructions);
 
 const girly = create_js_stim(trial_objects);
 const tv_array = create_timevari(girly);

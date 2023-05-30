@@ -85,7 +85,7 @@ let trial_objects = [
     },
     {
         "Group": "Control",
-        "Agentive (Non-Cop Fatality)": "<hl>Racist vandal target Indigenous community leader in hate crime incident</hl>",
+        "Agentive (Non-Cop Fatality)": "<hl>Racist vandal targets Indigenous community leader in hate crime incident</hl>",
         "Nonagentive (Non-Cop Fatality)": "<hl>Indigenous community leader targeted in racist hate crime incident with vandal</hl>",
         "Agentive (Cop Fatality)": "",
         "Nonagentive (Cop Fatality)": ""
