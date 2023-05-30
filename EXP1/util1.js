@@ -23,9 +23,9 @@ function create_js_stim(js_object) {
   var key = Object.keys(tar_category);
   var key2 = Object.keys(con_category);
 
-  while (tar_count != 12) {
+  while (tar_count != 8) {
     for (var category in tar_category) {
-      if (tar_category[category] != 3) {
+      if (tar_category[category] != 2) {
         var nummy = getRandomInt(0, (js_sim.length /2));
         if (!numbers.has(nummy)) {
           numbers.add(nummy);
@@ -36,9 +36,9 @@ function create_js_stim(js_object) {
       }
     }
   }
-  while (con_count != 12) {
+  while (con_count != 8) {
     for (var cat in con_category) {
-      if (con_category[cat] != 6) {
+      if (con_category[cat] != 4) {
         var num = getRandomInt((js_sim.length /2), js_sim.length);
         if (!numbers.has(num)) {
           numbers.add(num);
@@ -50,23 +50,34 @@ function create_js_stim(js_object) {
     }
 
   }
-  console.log(con_count,tar_count )
-  console.log(arr)
-  console.log(tar_category)
-  console.log(con_category)
   return arr;
 }
 
 
 function create_timevari(json_object) {
   let timevari = [];
+  var cops = ["police officer", "sheriff","officers", "cops", "officer", "security guard", "state trooper", "cop", "police chief", "border patrol agent",  "police"];
+  var people = ["nurse", "fisherman", "teen","owner", "vandal", "superintendent", "community leader", "patient", "doctor", "father", "driver", "teacher", "protesters", "student", "club bouncer", "waiter", "mom", "neighbor", "husband", "wife", "man"];
   var values = Object.values(json_object);
   for (let i = 0; i < json_object.length; i++) {
     var key = Object.keys(json_object[i]);
     obj = {};
+    obj.key = key[0];
     obj.stimulus = json_object[i][key];
-    timevari.push(obj)
+    obj.agents = {};
+    var copsassign = (element) => obj.stimulus.toLowerCase().includes(element);
+    var peopleassign = (element) => obj.stimulus.toLowerCase().includes(element);
+    var peoples = people.filter(peopleassign);
+    if (key == 'Target') {
+      obj.agents.ag1 = cops.find(copsassign).toLowerCase().charAt(0).toUpperCase() + cops.find(copsassign).toLowerCase().substr(1).toLowerCase();
+      obj.agents.ag2 = peoples[0].charAt(0).toUpperCase() + peoples[0].substr(1).toLowerCase();
+    }
+    else {
+      obj.agents.ag1 = peoples[0].toLowerCase().charAt(0).toUpperCase() + peoples[0].toLowerCase().substr(1).toLowerCase();
+      obj.agents.ag2 = peoples[1].toLowerCase().charAt(0).toUpperCase() + peoples[1].toLowerCase().substr(1).toLowerCase();
+    }
 
-  }
-  return timevari;
+  timevari.push(obj)
+}
+return timevari;
 }

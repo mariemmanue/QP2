@@ -1,10 +1,12 @@
 hl {
   font-size: 150%;
+  border: 3px solid black;
 }
-hl::after {
-  content: "\A";
-  white-space: pre;
+
+.jspsych-btn {
+  margin-top: 60px;
 }
+
 
 p {
   border: 1px solid black;
@@ -12,5 +14,5 @@ p {
   margin-bottom: 100px;
   margin-right: 150px;
   margin-left: 150px;
-  background-color: lightblue;
+  background-color: FloralWhite;
 }
