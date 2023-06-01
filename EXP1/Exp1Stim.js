@@ -36,10 +36,10 @@ let trial_objects = [
     },
     {
         "Group": "Target",
-        "Agentive (Non-Cop Fatality)": "<hl>State trooper injured after shooting club bouncer outside popular bar </hl>",
-        "Nonagentive (Non-Cop Fatality)": "<hl>Club bouncer shot after shooting with state trooper outside popular bar </hl>",
-        "Agentive (Cop Fatality)": "<hl>Club bouncer injured after shooting state trooper outside popular bar </hl>",
-        "Nonagentive (Cop Fatality)": "<hl>State trooper shot after shooting with club bouncer outside popular bar </hl>"
+        "Agentive (Non-Cop Fatality)": "<hl>State trooper kills club bouncer during shootout outside popular bar </hl>",
+        "Nonagentive (Non-Cop Fatality)": "<hl>Club bouncer killed during shootout with state trooper outside of popular bar </hl>",
+        "Agentive (Cop Fatality)": "<hl>Club bouncer kills state trooper during shootout outside of popular bar </hl>",
+        "Nonagentive (Cop Fatality)": "<hl>State trooper killed during shootout with club bouncer outside popular bar </hl>"
     },
     {
         "Group": "Target",
@@ -50,10 +50,10 @@ let trial_objects = [
     },
     {
         "Group": "Target",
-        "Agentive (Non-Cop Fatality)": "<hl>Police chief kills fisherman in New Year's Day shooting incident; family says</hl>",
-        "Nonagentive (Non-Cop Fatality)": "<hl>Fisherman killed in New Year's Day shooting incident with police chief; family says</hl>",
-        "Agentive (Cop Fatality)": "<hl>Fisherman kills police chief in New Year's Day shooting incident; family says</hl>",
-        "Nonagentive (Cop Fatality)": "<hl>Police chief killed in New Year's Day shooting incident with fisherman; family says</hl>"
+        "Agentive (Non-Cop Fatality)": "<hl>Police chief kills fisherman in New Year's Day shooting incident</hl>",
+        "Nonagentive (Non-Cop Fatality)": "<hl>Fisherman killed in New Year's Day shooting incident with police chief</hl>",
+        "Agentive (Cop Fatality)": "<hl>Fisherman kills police chief in New Year's Day shooting incident</hl>",
+        "Nonagentive (Cop Fatality)": "<hl>Police chief killed in New Year's Day shooting incident with fisherman</hl>"
     },
     {
         "Group": "Control",
@@ -92,8 +92,8 @@ let trial_objects = [
     },
     {
         "Group": "Control",
-        "Agentive (Non-Cop Fatality)": "<hl>Young mom stabs neighbor 17 times during road range incident; community members express devastation</hl>",
-        "Nonagentive (Non-Cop Fatality)": "<hl>Neighbor stabbed 17 times during road range incident with young mom; community members express devastation</hl>",
+        "Agentive (Non-Cop Fatality)": "<hl>Young mom stabs neighbor 17 times during road rage incident; community members express devastation</hl>",
+        "Nonagentive (Non-Cop Fatality)": "<hl>Neighbor stabbed 17 times during road rage incident with young mom; community members express devastation</hl>",
         "Agentive (Cop Fatality)": "",
         "Nonagentive (Cop Fatality)": ""
     },
@@ -106,8 +106,8 @@ let trial_objects = [
     },
     {
         "Group": "Control",
-        "Agentive (Non-Cop Fatality)": "<hl>Father beats drunk driver after Cobb county crash</hl>",
-        "Nonagentive (Non-Cop Fatality)": "<hl>Drunk driver beaten after Cobb county crash with father</hl>",
+        "Agentive (Non-Cop Fatality)": "<hl>Father beats drunk driver after Cobb County crash</hl>",
+        "Nonagentive (Non-Cop Fatality)": "<hl>Drunk driver beaten after Cobb County crash with father</hl>",
         "Agentive (Cop Fatality)": "",
         "Nonagentive (Cop Fatality)": ""
     }

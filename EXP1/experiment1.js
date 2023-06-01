@@ -20,6 +20,10 @@ timeline.push(irb)
 
 const demo = {
   type: jsPsychSurvey,
+  button_label_finish: "Submit",
+  button_label_next: 'Continue',
+  required_question_label: "*" ,
+  required_error: "Please answer the question.",
   pages: [
     [
       {
@@ -32,55 +36,67 @@ const demo = {
         name: 'race',
         options: ['American Indian or Alaskan Native', 'Asian / Pacific Islander',
         'Black', 'Hispanic', 'White'],
-        required: false
+        required: true
       },
       {
         type: 'drop-down',
         prompt: 'Gender:',
         name: 'gender',
         options: ['Woman', 'Man', 'Non-binary/Non-conforming'],
-        required: false
+        required: true
       },
       {
         type: 'multi-choice',
         prompt: 'What is your age?',
         name: 'age',
         options: ['18-24', '25-34', '35-44', '45-54', '55-64', '65+'],
-        required: false
+        required: true
+      },
+    ],
+    [
+      {
+        type: 'html',
+        prompt: 'Please answer the following questions.'
       },
       {
         type: 'multi-choice',
         prompt: 'Do you think the police are generally honest?',
         name: 'police honest',
         options: ['Yes', 'No'],
-        required: false
+        required: true
       },
       {
         type: 'multi-choice',
         prompt: 'Do they respect a person\'s basic rights?',
         name: 'police rights',
         options: ['Yes', 'No'],
-        required: false
+        required: true
       },
       {
         type: 'multi-choice',
         prompt: 'Do the police usually listen to people\’s views before making a decision?',
         name: 'police listen',
         options: ['Yes', 'No'],
-        required: false
+        required: true
       },
       {
         type: 'multi-choice',
         prompt: 'Do you generally trust the police?',
         name: 'police trust',
         options: ['Yes', 'No'],
-        required: false
+        required: true
+      },
+    ],
+    [
+      {
+        type: 'html',
+        prompt: 'Please answer the following questions.'
       },
       {
         type: 'likert',
         prompt: 'How conservative would you rate yourself?',
         name: 'conservative',
-        required: false,
+        required: true,
         likert_scale_min_label: 'Not at all',
         likert_scale_max_label: 'Extremely Conservative',
         likert_scale_values: [
@@ -95,7 +111,7 @@ const demo = {
         type: 'likert',
         prompt: 'How liberal would you rate yourself?',
         name: 'police stop',
-        required: false,
+        required: true,
         likert_scale_min_label: 'Not at all',
         likert_scale_max_label: 'Extremely Liberal',
         likert_scale_values: [
@@ -112,9 +128,9 @@ const demo = {
 
 
 const instructions = {
-  type: jsPsychHtmlKeyboardResponse,
+  type: jsPsychHtmlButtonResponse,
   stimulus: "<p>In this experiment, you will see a total of 16 article headlines. You will also answer a number of questions following each headline. Please press the spacebar to continue. Please note that the various topics presented in headlines involve events related to death, violence and murder, which may be distressing for some viewers. If you are still interested in continuing, please press the spacebar.</p>",
-  choices: [" "],
+  choices: ["Next"],
   on_start: function () {
     jsPsych.setProgressBar(0);
   }
@@ -123,7 +139,7 @@ timeline.push(instructions);
 
 const girly = create_js_stim(trial_objects);
 const tv_array = create_timevari(girly);
-const trial_questions = {
+var headline = {
   timeline: [
     {
       type: jsPsychHtmlButtonResponse,
@@ -138,73 +154,183 @@ const trial_questions = {
     },
     {
       type: jsPsychSurvey,
+      required_question_label: "*" ,
+      required_error: "Please answer the question.",
       pages:[
         [
           {
             type: 'multi-choice',
             prompt: 'Who was harmed?',
             name: 'harm',
+            columns: 0,
             options: function () {
               var agents = jsPsych.timelineVariable('agents');
-              var options_array = [agents.ag1, agents.ag2];
+              var options_array = [agents.ag1, agents.ag2, "None of the above"];
               return options_array;
             },
-            required: false
+            required: true
           },
-        ]
-      ]
-    },
+        ],
+      ],
+      button_label_next: 'Continue',
+      button_label_back: 'Previous',
+      button_label_finish: 'Submit',
+    }
+  ],
+  on_timeline_finish: function() {
+    var curr = jsPsych.getProgressBarCompleted();
+    jsPsych.setProgressBar(curr + (1/(tv_array.length * 3)));
+  }
+};
+
+
+var q2 = {
+  timeline: [
     {
       type: jsPsychSurvey,
+      required_question_label: "*" ,
+      required_error: "Please answer the question.",
       pages:[
         [
           {
             type: 'multi-choice',
             prompt: 'Who caused the harm?',
+            columns: 0,
             name: 'harmer',
             options: function () {
               var agents = jsPsych.timelineVariable('agents');
-              var options_array = [agents.ag1, agents.ag2];
+              var options_array = [agents.ag1, agents.ag2, "None of the above"];
               return options_array;
             },
-            required: false
+            required: true
           },
-        ]
-      ]
-    },
+        ],
+      ],
+      button_label_next: 'Continue',
+      button_label_back: 'Previous',
+      button_label_finish: 'Submit',
+    }
+  ],
+  on_timeline_finish: function() {
+    var curr = jsPsych.getProgressBarCompleted();
+    jsPsych.setProgressBar(curr + (1/(tv_array.length * 3)));
+  }
+};
+
+var q3 = {
+  timeline: [
     {
       type: jsPsychSurvey,
+      required_question_label: "*" ,
+      required_error: "Please answer the question.",
       pages:[
         [
           {
-            type: 'multi-choice',
-            prompt: 'Who is to blame for the event?',
-            name: 'blame main amount',
-            required: false,
-            options: function () {
+            type: 'likert-table',
+            prompt: ' ',
+            statements: [
+              {prompt: 'Who is to blame for the harmful event?', name: 'blame amount'},
+              {prompt: 'Who is responsible for the harmful event?', name: 'responisble amount'},
+
+            ],
+            required: true,
+            options: function() {
               const agents = jsPsych.timelineVariable('agents');
               const options_array = [
-                "Entirely the " + agents.ag1,
-                "Mostly the " + agents.ag1,
-                "Both the " + agents.ag1 + " and " + agents.ag2 + " equally",
-                "Mostly the " + agents.ag2,
-                "Entirely the " + agents.ag2]
+                "Entirely the fault of the " + agents.ag1,
+                "Mostly the fault of the  " + agents.ag1,
+                "Both the fault of the  " + agents.ag1 + " and " + agents.ag2 + " equally",
+                "Mostly the fault of the  " + agents.ag2,
+                "Entirely the fault of the " + agents.ag2]
                 return options_array;
               },
             },
+            {
+              type: 'text',
+              textbox_rows: 5,
+              textbox_columns: 40,
+              prompt: function() {
+                return "After selecting a response, feel free to provide more detail on how you would assign blame and responsibility for the harmful event, if none of the above options make complete sense."
+              },
+              name: 'blame other',
+              placeholder: 'Type "N/A" if any of the above options align with your interpretation of the harmful event.',
+              required: true
+            }
           ]
-        ]
+        ],
+        // title: 'Please anwser the following question regarding the headline you just saw.',
+        button_label_next: 'Continue',
+        button_label_back: 'Previous',
+        button_label_finish: 'Submit',
       }
     ],
     on_timeline_finish: function() {
       var curr = jsPsych.getProgressBarCompleted();
-      jsPsych.setProgressBar(curr + (1/(tv_array.length)));
+      jsPsych.setProgressBar(curr + (1/(tv_array.length * 3)));
+    }
+  };
+
+  var more_info = {
+    type: jsPsychSurvey,
+    pages: [
+      [
+        {
+          type: 'text',
+          prompt: function() {
+            var data_last = jsPsych.data.getLastTrialData().values()[0];
+            const agents = jsPsych.timelineVariable('agents');
+            if(data_last.response["harm"]){
+              return "Who was harmed, if not the " + agents.ag1 + " or the " +agents.ag2 + "?"
+            }
+            else if (data_last.response["harmer"]) {
+              return "Who was the actual harmer, if not " + agents.ag1 + " or " +agents.ag2 + "?"
+            }
+          },
+          placeholder: 'Feel free to type as little or as much as you\'d like!',
+          textbox_rows: 5,
+          textbox_columns: 40,
+          name: 'who other',
+          required: true,
+        },
+      ],
+    ],
+    button_label_next: 'Continue',
+    button_label_back: 'Previous',
+    button_label_finish: 'Submit',
+  };
+
+  var other_harm = {
+    timeline: [more_info],
+    conditional_function: function(){
+      var data_last = jsPsych.data.getLastTrialData().values()[0];
+      if(data_last.response["harm"] == "None of the above"){
+        return true;
+      }
+      else {
+        return false;
+      }
     }
   };
 
 
+  var other_harmer = {
+    timeline: [more_info],
+    conditional_function: function(){
+      var data_last = jsPsych.data.getLastTrialData().values()[0];
+      if(data_last.response["harmer"] == "None of the above"){
+        return true;
+      }
+      else {
+        return false;
+      }
+    }
+  };
+
+
+
+
   var procedure = {
-    timeline: [trial_questions],
+    timeline: [headline, other_harm, q2, other_harmer, q3],
     timeline_variables: tv_array,
     randomize_order: true
   };
