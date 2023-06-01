@@ -129,7 +129,7 @@ const demo = {
 
 const instructions = {
   type: jsPsychHtmlButtonResponse,
-  stimulus: "<p>In this experiment, you will see a total of 16 article headlines. You will also answer a number of questions following each headline. Please press the spacebar to continue. Please note that the various topics presented in headlines involve events related to death, violence and murder, which may be distressing for some viewers. If you are still interested in continuing, please press the spacebar.</p>",
+  stimulus: "<p>In this experiment, you will see a total of 16 article headlines. You will also answer a number of questions following each headline. Please note that the various topics presented in headlines involve events related to death, violence and murder, which may be distressing for some viewers. Click 'Next', if you are still interested in continuing. </p>",
   choices: ["Next"],
   on_start: function () {
     jsPsych.setProgressBar(0);
@@ -237,11 +237,11 @@ var q3 = {
             options: function() {
               const agents = jsPsych.timelineVariable('agents');
               const options_array = [
-                "Entirely the fault of the " + agents.ag1,
-                "Mostly the fault of the  " + agents.ag1,
-                "Both the fault of the  " + agents.ag1 + " and " + agents.ag2 + " equally",
-                "Mostly the fault of the  " + agents.ag2,
-                "Entirely the fault of the " + agents.ag2]
+                "Entirely the " + agents.ag1,
+                "Mostly the  " + agents.ag1,
+                "Both the  " + agents.ag1 + " and " + agents.ag2 + " equally",
+                "Mostly the  " + agents.ag2,
+                "Entirely the " + agents.ag2]
                 return options_array;
               },
             },
@@ -253,7 +253,7 @@ var q3 = {
                 return "After selecting responses to both questions, feel free to provide more detail on how you would assign blame and responsibility for the harmful event, especially if none of the above options make complete sense."
               },
               name: 'blame other',
-              placeholder: 'Type "N/A" if any of the above options align with your interpretation of the harmful event.',
+              placeholder: 'Type "N/A" if any of the above options COMPLETELY align with your interpretation of the harmful event.',
               required: true
             }
           ]
