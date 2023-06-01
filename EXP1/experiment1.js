@@ -280,10 +280,10 @@ var q3 = {
             var data_last = jsPsych.data.getLastTrialData().values()[0];
             const agents = jsPsych.timelineVariable('agents');
             if(data_last.response["harm"]){
-              return "Who was harmed, if not the " + agents.ag1 + " or the " +agents.ag2 + "?"
+              return "Who was harmed, if not either the " + agents.ag1 + " or the " +agents.ag2 + "?"
             }
             else if (data_last.response["harmer"]) {
-              return "Who was the actual harmer, if not " + agents.ag1 + " or " +agents.ag2 + "?"
+              return "Who was the actual harmer, if not either the " + agents.ag1 + " or the " +agents.ag2 + "?"
             }
           },
           placeholder: 'Feel free to type as little or as much as you\'d like!',
