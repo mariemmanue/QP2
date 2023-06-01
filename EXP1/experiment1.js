@@ -250,7 +250,7 @@ var q3 = {
               textbox_rows: 5,
               textbox_columns: 40,
               prompt: function() {
-                return "After selecting a response, feel free to provide more detail on how you would assign blame and responsibility for the harmful event, if none of the above options make complete sense."
+                return "After selecting responses to both questions, feel free to provide more detail on how you would assign blame and responsibility for the harmful event, especially if none of the above options make complete sense."
               },
               name: 'blame other',
               placeholder: 'Type "N/A" if any of the above options align with your interpretation of the harmful event.',
