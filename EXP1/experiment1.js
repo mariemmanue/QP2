@@ -1,8 +1,27 @@
 const jsPsych = initJsPsych({
   show_progress_bar: true,
   message_progress_bar: 'Progress on Experimental Questions',
-  auto_update_progress_bar: false
+  auto_update_progress_bar: false,
+  on_finish: function(){
+    // jsPsych.data.displayData('csv');
+    proliferate.submit({"trials": data.values()});
+    window.location = "https://app.prolific.co/submissions/complete?cc=C1HP2H0O"
+  }
 });
+
+
+// capture info from Prolific
+var subject_id = jsPsych.data.getURLVariable('PROLIFIC_PID');
+var study_id = jsPsych.data.getURLVariable('STUDY_ID');
+var session_id = jsPsych.data.getURLVariable('SESSION_ID');
+
+jsPsych.data.addProperties({
+  subject_id: subject_id,
+  study_id: study_id,
+  session_id: session_id
+});
+
+
 let timeline = [];
 
 const irb = {
