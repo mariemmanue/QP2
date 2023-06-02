@@ -6,7 +6,6 @@ const jsPsych = initJsPsych({
 let timeline = [];
 
 const irb = {
-  //   // Which plugin to use
   type: jsPsychHtmlButtonResponse,
   stimulus: `
   <img src='alpslogo.png'width="200" height="90">
@@ -43,7 +42,6 @@ const irb = {
   choices: ['Start Experiment']
 };
 
-// push to the timeline
 timeline.push(irb)
 
 
