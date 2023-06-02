@@ -374,7 +374,6 @@ var q3 = {
     timeline_variables: tv_array,
     randomize_order: true
   };
-
   timeline.push(procedure)
 
 
