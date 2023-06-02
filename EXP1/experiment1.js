@@ -382,7 +382,7 @@ var q3 = {
   const quest_intstructions = {
     type: jsPsychHtmlButtonResponse,
     choices: ['Continue'],
-    stimulus: "<p>That's the end of the experimental portion! Thank you for your responses. To help us analyze our results, it would be helpful to know a little more about you. Please answer the following questions.</p>"
+    stimulus: "<p>That's the end of the experimental portion! Thank you so much for your responses, thus far. To help us analyze our results, it would be helpful to know a little more about you. Please answer the following questions.</p>"
   };
   timeline.push(quest_intstructions)
 
