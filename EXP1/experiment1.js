@@ -375,7 +375,7 @@ var q3 = {
     randomize_order: true
   };
 
-  // timeline.push(procedure)
+  timeline.push(procedure)
 
 
 
