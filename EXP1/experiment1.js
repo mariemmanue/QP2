@@ -3,7 +3,7 @@ const jsPsych = initJsPsych({
   message_progress_bar: 'Progress on Experimental Questions',
   auto_update_progress_bar: false,
   on_finish: function(data){
-    jsPsych.data.displayData('csv');
+    // jsPsych.data.displayData('csv');
     proliferate.submit({"trials": data.values()});
     window.location = "https://app.prolific.co/submissions/complete?cc=C1HP2H0O"
   }
