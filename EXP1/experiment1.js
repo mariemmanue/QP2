@@ -1,16 +1,46 @@
 const jsPsych = initJsPsych({
   show_progress_bar: true,
+  message_progress_bar: 'Progress on Experimental Questions',
   auto_update_progress_bar: false
 });
 let timeline = [];
 
 const irb = {
-  // Which plugin to use
+  //   // Which plugin to use
   type: jsPsychHtmlButtonResponse,
-  // What should be displayed on the screen
-  stimulus: '<p>We invite you to participate in a research study on language production and comprehension. Your experimenter will ask you to do a linguistic task such as reading sentences or words, naming pictures or describing scenes, making up sentences of your own, or participating in a simple language game. <br><br>There are no risks or benefits of any kind involved in this study. <br><br>You will be paid for your participation at the posted rate.<br><br>If you have read this form and have decided to participate in this experiment, please understand your participation is voluntary and you have the right to withdraw your consent or discontinue participation at anytime without penalty or loss of benefits to which you are otherwise entitled. You have the right to refuse to do particular tasks. Your individual privacy will be maintained in all published and written data resulting from the study. You may print this form for your records.<br><br>CONTACT INFORMATION: If you have any questions, concerns or complaints about this research study, its procedures, risks and benefits, you should contact the Protocol Director Meghan Sumner at (650)-725-9336. If you are not satisfied with how this study is being conducted, or if you have any concerns, complaints, or general questions about the research or your rights as a participant, please contact the Stanford Institutional Review Board (IRB) to speak to someone independent of the research team at (650)-723-2480 or toll free at 1-866-680-2906. You can also write to the Stanford IRB, Stanford University, 3000 El Camino Real, Five Palo Alto Square, 4th Floor, Palo Alto, CA 94306 USA.<br><br>If you agree to participate, please proceed to the study tasks.</font></p>',
-  // What should the button(s) say
-  choices: ['Continue']
+  stimulus: `
+  <img src='alpslogo.png'width="200" height="90">
+  <div class="irb">
+  <h2>Stanford interActional Language Processing Lab</h2>
+  We invite you to participate in a research study on language.
+  You will read a number of headlines and answer simple questions about them.
+  Be sure to please read the headlines carefully, but respond according to your
+  first impression. This study will take about 15 minutes.
+  Please read the legal information below. If you agree to participate after reading,
+  press the button below to start the experiment.
+  </div>
+  <div class="legal">
+  Legal information: <br><br> There are no risks or benefits of any kind involved in this study.
+  You will be paid for your participation at the posted rate. If you have read this form
+  and have decided to participate in this experiment, please understand your participation
+  is voluntary and you have the right to withdraw your consent or discontinue participation
+  at anytime without penalty or loss of benefits to which you are otherwise entitled.
+  You have the right to refuse to do particular tasks. Your individual privacy will be
+  maintained in all published and written data resulting from the study. You may print
+  this form for your records.<br><br>
+  CONTACT INFORMATION: <br><br>
+  If you have any questions\, concerns or complaints about this research study\,
+  its procedures\, risks and benefits\, you should contact the Protocol Director
+  Meghan Sumner at (650)-725-9336. If you are not satisfied with how this study
+  is being conducted, or if you have any concerns, complaints, or general questions
+  about the research or your rights as a participant, please contact the Stanford
+  Institutional Review Board (IRB) to speak to someone independent of the research team
+  at (650)-723-2480 or toll free at 1-866-680-2906. You can also write to the Stanford IRB\,
+  Stanford University\, 3000 El Camino Real, Five Palo Alto Square, 4th Floor, Palo Alto,
+  CA 94306 USA.
+  </div>
+  `,
+  choices: ['Start Experiment']
 };
 
 // push to the timeline
@@ -60,21 +90,21 @@ const demo = {
       },
       {
         type: 'multi-choice',
-        prompt: 'Do you think the police are generally honest?',
+        prompt: 'Do you think that the police are generally honest?',
         name: 'police honest',
         options: ['Yes', 'No'],
         required: true
       },
       {
         type: 'multi-choice',
-        prompt: 'Do they respect a person\'s basic rights?',
+        prompt: 'Do the police respect a person\'s basic rights?',
         name: 'police rights',
         options: ['Yes', 'No'],
         required: true
       },
       {
         type: 'multi-choice',
-        prompt: 'Do the police usually listen to people\’s views before making a decision?',
+        prompt: 'Do the police usually listen to people\'s views before making a decision?',
         name: 'police listen',
         options: ['Yes', 'No'],
         required: true
@@ -91,6 +121,13 @@ const demo = {
       {
         type: 'html',
         prompt: 'Please answer the following questions.'
+      },
+      {
+        type: 'multi-choice',
+        prompt: 'What political party do you identify closest with?',
+        name: 'political party',
+        options: ['Democratic', 'Republican', 'Libertarian', 'Green', 'Independent'],
+        required: true
       },
       {
         type: 'likert',
@@ -129,7 +166,13 @@ const demo = {
 
 const instructions = {
   type: jsPsychHtmlButtonResponse,
-  stimulus: "<p>In this experiment, you will see a total of 16 article headlines. You will also answer a number of questions following each headline. Please note that the various topics presented in headlines involve events related to death, violence and murder, which may be distressing for some viewers. Click 'Next', if you are still interested in continuing. </p>",
+  stimulus: `
+  <p>In this experiment, you will see a total of 16 article headlines.
+  You will also answer a number of questions following each headline.
+  Please note that the various topics presented in headlines involve events related to
+  death, violence and murder, which may be distressing for some viewers.
+  Click 'Next', if you are still interested in continuing.</p>
+  `,
   choices: ["Next"],
   on_start: function () {
     jsPsych.setProgressBar(0);
@@ -150,7 +193,7 @@ var headline = {
       },
       choices: ["Next"],
       button_html: '<button class="jspsych-btn">Next</button>',
-      prompt: '<font size="2">After reading the headline carefully, press next to continue.'
+      prompt: '<font size="2.5">After reading the headline carefully, press next to continue.'
     },
     {
       type: jsPsychSurvey,
@@ -165,7 +208,7 @@ var headline = {
             columns: 0,
             options: function () {
               var agents = jsPsych.timelineVariable('agents');
-              var options_array = [agents.ag1, agents.ag2, "None of the above"];
+              var options_array = [agents.ag1, agents.ag2, "Other"];
               return options_array;
             },
             required: true
@@ -199,7 +242,7 @@ var q2 = {
             name: 'harmer',
             options: function () {
               var agents = jsPsych.timelineVariable('agents');
-              var options_array = [agents.ag1, agents.ag2, "None of the above"];
+              var options_array = [agents.ag1, agents.ag2, "Other"];
               return options_array;
             },
             required: true
@@ -237,11 +280,11 @@ var q3 = {
             options: function() {
               const agents = jsPsych.timelineVariable('agents');
               const options_array = [
-                "Entirely the " + agents.ag1,
+                "Only the " + agents.ag1,
                 "Mostly the  " + agents.ag1,
                 "Both the  " + agents.ag1 + " and " + agents.ag2 + " equally",
                 "Mostly the  " + agents.ag2,
-                "Entirely the " + agents.ag2]
+                "Only the " + agents.ag2]
                 return options_array;
               },
             },
@@ -250,15 +293,13 @@ var q3 = {
               textbox_rows: 5,
               textbox_columns: 40,
               prompt: function() {
-                return "After selecting responses to both questions, feel free to provide more detail on how you would assign blame and responsibility for the harmful event, especially if none of the above options make complete sense."
+                return "If you would have preferred to give a different response, please provide more detail on how you would assign blame and responsibility for the harmful event."
               },
               name: 'blame other',
-              placeholder: 'Type "N/A" if any of the above options COMPLETELY align with your interpretation of the harmful event.',
-              required: true
+              required: false
             }
           ]
         ],
-        // title: 'Please anwser the following question regarding the headline you just saw.',
         button_label_next: 'Continue',
         button_label_back: 'Previous',
         button_label_finish: 'Submit',
@@ -283,10 +324,9 @@ var q3 = {
               return "Who was harmed, if not either the " + agents.ag1 + " or the " +agents.ag2 + "?"
             }
             else if (data_last.response["harmer"]) {
-              return "Who was the actual harmer, if not either the " + agents.ag1 + " or the " +agents.ag2 + "?"
+              return "Who was the harmer, if not either the " + agents.ag1 + " or the " +agents.ag2 + "?"
             }
           },
-          placeholder: 'Feel free to type as little or as much as you\'d like!',
           textbox_rows: 5,
           textbox_columns: 40,
           name: 'who other',
@@ -303,7 +343,7 @@ var q3 = {
     timeline: [more_info],
     conditional_function: function(){
       var data_last = jsPsych.data.getLastTrialData().values()[0];
-      if(data_last.response["harm"] == "None of the above"){
+      if(data_last.response["harm"] == "Other"){
         return true;
       }
       else {
@@ -317,7 +357,7 @@ var q3 = {
     timeline: [more_info],
     conditional_function: function(){
       var data_last = jsPsych.data.getLastTrialData().values()[0];
-      if(data_last.response["harmer"] == "None of the above"){
+      if(data_last.response["harmer"] == "Other"){
         return true;
       }
       else {
@@ -335,7 +375,7 @@ var q3 = {
     randomize_order: true
   };
 
-  timeline.push(procedure)
+  // timeline.push(procedure)
 
 
 
@@ -343,7 +383,7 @@ var q3 = {
   const quest_intstructions = {
     type: jsPsychHtmlButtonResponse,
     choices: ['Continue'],
-    stimulus: "<p>That's the end of the experiment! Thank you for your responses. To help us analyze our results, it would be helpful to know know a little more about you. Please answer the following questions.</p>"
+    stimulus: "<p>That's the end of the experiment! Thank you for your responses. To help us analyze our results, it would be helpful to know a little more about you. Please answer the following questions.</p>"
   };
   timeline.push(quest_intstructions)
 

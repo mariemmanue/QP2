@@ -1,20 +1,66 @@
 hl {
-  font-size: 125%;
-  border: 3px solid black;
-  padding: 20px
+  font-size: 220%;
+  border: 3px solid white;
+  padding: 30px;
+  font-family: "New Century Schoolbook", "TeX Gyre Schola", serif
 }
 
 .jspsych-btn {
   margin-top: 60px;
+  font-size: 100%;
+  color: black;
+  font-family: "Georgia", serif;
 }
 
+#jspsych-progressbar-container {
+  color: black;
+  font-family: "Gill Sans", sans-serif
+}
+
+.sv_qcbc{
+  width: 100%;
+  font-size: 130%;
+  color: black;
+  font-family: "Georgia", serif;
+}
+
+.sv_main {
+  color: black;
+  font-family: "Georgia", serif;
+}
+
+.sv_main .sv_container .sv_body .sv_p_root .sv_q_title {
+  font-size: 130%;
+  color: black;
+  font-family: "Georgia", serif;
+}
+
+gen {
+  color: black;
+  font-family: "Georgia", serif;
+}
 
 p {
-  border: 1px solid black;
   padding: 15px;
-  margin-top: 100px;
-  margin-bottom: 100px;
+  font-size: 120%;
+  margin-top: 50px;
+  margin-bottom: 5px;
   margin-right: 150px;
   margin-left: 150px;
-  background-color: FloralWhite;
+  color: black;
+  border: 2px solid white;
+  font-family: "Georgia", serif;
+
+}
+
+.irb {
+  padding: 15px;
+  font-family: "Georgia", serif;
+}
+
+.legal {
+  border: 1px solid black;
+  text-align: left;
+  padding: 15px;
+  font-family: "Times New Roman", Times, serif;
 }
