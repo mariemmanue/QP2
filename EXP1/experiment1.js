@@ -15,7 +15,7 @@ const irb = {
   We invite you to participate in a research study on language.
   You will read a number of headlines and answer simple questions about them.
   Be sure to please read the headlines carefully, but respond according to your
-  first impression. This study will take about 15 minutes.
+  first impression. This study will take about 10 minutes.
   Please read the legal information below. If you agree to participate after reading,
   press the button below to start the experiment.
   </div>
@@ -382,7 +382,7 @@ var q3 = {
   const quest_intstructions = {
     type: jsPsychHtmlButtonResponse,
     choices: ['Continue'],
-    stimulus: "<p>That's the end of the experiment! Thank you for your responses. To help us analyze our results, it would be helpful to know a little more about you. Please answer the following questions.</p>"
+    stimulus: "<p>That's the end of the experimental portion! Thank you for your responses. To help us analyze our results, it would be helpful to know a little more about you. Please answer the following questions.</p>"
   };
   timeline.push(quest_intstructions)
 
