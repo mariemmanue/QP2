@@ -1,0 +1,184 @@
+---
+title: "EXP1_QP2"
+author: "Marie Tano"
+date: "2023-06-12"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+## extract the BibTeX entry from the return value
+x <- citation()
+toBibtex(x)
+```
+
+
+# Loading Libraries
+```{r}
+library(dplyr)
+library(tidyverse)
+library(ggrepel)
+library(lmerTest)
+library(lme4)
+source("helpers.R")
+library(psych)
+
+```
+
+# Loading Dataset
+```{r}
+EXP1 = read.csv("./headlines_experiment-trials.csv", stringsAsFactors=T, fileEncoding="latin1")
+EXP1
+
+list_cops <- list("police officer", "sheriff","officers", "cops", "officer", "security guard", "state trooper", "cop", "police chief", "border patrol agent",  "police")
+list_people <- list("nurse", "Fisherman", "teen","owner", "vandal", "superintendent", "community leader", "patient", "doctor", "father", "driver", "teacher", "protesters", "student", "club bouncer", "waiter", "mom", "neighbor", "husband", "wife", "man")
+```
+
+###Demographics
+```{r}
+EXP1 %>% 
+  group_by(gender) %>%
+  summarise(gender_count = n()) 
+
+EXP1 %>% 
+  group_by(political.party) %>%
+  summarise(pol_count = n()) 
+
+EXP1 %>% 
+  group_by(race) %>%
+  summarise(race_count = n()) 
+
+
+```
+
+
+
+
+#Target: Blame
+##Linear Regression
+### Big Model
+```{r}
+target_data <- EXP1 %>% filter(Type == "Target") 
+big_model = lmer(Blame ~ Grammar*Agent + (1+Grammar*Agent|Stimulus) +
+(1+Grammar*Agent|WorkerID), data = target_data)
+summary(big_model)
+```
+
+
+###Grammar x Agent
+```{r}
+blame_gram = lm(Blame ~ Grammar*Agent, data = target_data)
+summary(blame_gram)
+```
+
+##Plots
+###Agentivity
+```{r mean blame/responsibility rating as a function of agentivity}
+EXP1 %>% 
+  filter(Type == "Target")  %>% 
+  group_by(Grammar) %>%
+  summarise(blame_mean = mean(Blame))   %>% 
+  ggplot(aes(x = Grammar, y=blame_mean)) +
+  geom_bar(position="dodge", stat = "identity") +
+  scale_x_discrete(guide = guide_axis(n.dodge=3))+
+  geom_errorbar(position = position_dodge(width = .09), aes(ymax = blame_mean + ci.high(blame_mean), ymin= blame_mean - ci.low(blame_mean)), width=0.25) +
+  labs(y="Mean Blame Rating",x="Agentivity")
+```
+
+###Agent x Agentivity 
+```{r mean blame rating as a function of agent identity (x-axis) and agentivity (fill color)}
+EXP1 %>% 
+  filter(Type == "Target")  %>% 
+  group_by(Agent, Grammar) %>%
+  summarise(blame_mean = mean(Blame))  %>% 
+  ggplot(aes(x = Agent, y=blame_mean)) +
+  geom_bar(aes(fill = Grammar), position="dodge", stat = "identity") +
+  scale_x_discrete(guide = guide_axis(n.dodge=3))+
+  geom_errorbar(position = position_dodge(width = .09), aes(ymax = blame_mean + ci.high(blame_mean), ymin= blame_mean - ci.low(blame_mean)), width=0.25) +
+  labs(y="Mean Blame Rating",x="Agent Identity")
+```
+
+#Target: Responsibility
+##Linear Regression
+##Plots
+###Agentivity
+```{r mean blame/responsibility rating as a function of agentivity}
+EXP1 %>% 
+  filter(Type == "Target")  %>% 
+  group_by(Grammar) %>%
+  summarise(responsible_mean = mean(responsible))   %>% 
+  ggplot(aes(x = Grammar, y=responsible_mean)) +
+  geom_bar(position="dodge", stat = "identity") +
+  scale_x_discrete(guide = guide_axis(n.dodge=3))+
+  geom_errorbar(position = position_dodge(width = .09), aes(ymax = responsible_mean + ci.high(responsible_mean), ymin= responsible_mean - ci.low(responsible_mean)), width=0.25) +
+  labs(y="Mean Blame Rating",x="Agentivity")
+```
+
+
+
+###Agent x Agentivity 
+```{r mean responsibility rating as a function of agent identity (x-axis) and agentivity (fill color)}
+EXP1 %>% 
+  filter(Type == "Target")  %>% 
+  group_by(Agent, Grammar) %>%
+  summarise(responsible_mean = mean(responsible))  %>% 
+  ggplot(aes(x = Agent, y=responsible_mean)) +
+  geom_bar(aes(fill = Grammar), position="dodge", stat = "identity") +
+  scale_x_discrete(guide = guide_axis(n.dodge=3))+
+  geom_errorbar(position = position_dodge(width = .09), aes(ymax = responsible_mean + ci.high(responsible_mean), ymin= responsible_mean - ci.low(responsible_mean)), width=0.25) +
+  labs(y="Mean Responsibility Rating",x="Agent Identity")
+```
+
+# Control:Blame
+##Linear Regression
+##Plots
+###Agentivity
+```{r mean blame/responsibility rating as a function of agentivity}
+EXP1 %>% 
+  filter(Type == "Control")  %>% 
+  group_by(Grammar) %>%
+  summarise(blame_mean = mean(Blame))   %>% 
+  ggplot(aes(x = Grammar, y=blame_mean)) +
+  geom_bar(position="dodge", stat = "identity") +
+  scale_x_discrete(guide = guide_axis(n.dodge=3))+
+  geom_errorbar(position = position_dodge(width = .09), aes(ymax = blame_mean + ci.high(blame_mean), ymin= blame_mean - ci.low(blame_mean)), width=0.25) +
+  labs(y="Mean Blame Rating",x="Agentivity")
+```
+
+
+# Control:Responsibility
+##Linear Regression
+##Plots
+###Agentivity
+```{r mean blame/responsibility rating as a function of agentivity}
+EXP1 %>% 
+  filter(Type == "Control")  %>% 
+  group_by(Grammar) %>%
+  summarise(responsible_mean = mean(responsible))   %>% 
+  ggplot(aes(x = Grammar, y=responsible_mean)) +
+  geom_bar(position="dodge", stat = "identity") +
+  scale_x_discrete(guide = guide_axis(n.dodge=3))+
+  geom_errorbar(position = position_dodge(width = .09), aes(ymax = responsible_mean + ci.high(responsible_mean), ymin= responsible_mean - ci.low(responsible_mean)), width=0.25) +
+  labs(y="Mean Blame Rating",x="Agentivity")
+```
+
+
+
+
+```{r}
+  
+     - figure out a way to create perhaps the first viz separately by 
+demographic variables
+     - sanity check plots: proportion of harmer/harmee selections by 
+agent identity and grammatical agentivity; qualitative analysis of any 
+"other" judgments
+```
+
+
+
+
+
+
