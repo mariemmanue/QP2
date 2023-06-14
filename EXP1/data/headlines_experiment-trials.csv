@@ -1581,8 +1581,8 @@ WorkerID,Type,Agent,Grammar,Stimulus,StimulusNum,Harm,Other Harm,Harmer,Other Ha
 184,Control,Control,Agentive,Racist vandal targets Indigenous community leader in hate crime incident,23,Community leader,,Vandal,,0,0,,,,,,,,,,,
 184,Target,teen,Non-Agentive,Video footage shows county sheriff shot after confrontation with teen; sparks outrage,45,Sheriff,,,It did not say who did the shooting just that it was after a confrontation with teen Did not say teen had a gun.'},2,2,,,,,,,,,,,
 184,Target,state trooper,Non-Agentive,Club bouncer killed during shootout with state trooper outside of popular bar,21,Club bouncer,,State trooper,,2,1,,,,,,,,,,,
-184,Target,cops,Agentive,Cops shoot protesters during Friday confrontation; dash cam footage to be released early next week,28,Protesters,,Cops,,0,1,,,,,,,,,,,
-184,Control,Control,Non-Agentive,Neighbor stabbed 17 times during road rage incident with young mom; community members express devastation,1,Neighbor,,Mom,,0,0,,2,2,No,No,No,No,Independent,55-64,Black,Woman
+184,Target,cops,Agentive,Cops shoot protesters during Friday confrontation; dash cam footage to be released early next week,28,Protesters,,Cops,,0,1,,2,2,No,No,No,No,Independent,55-64,Black,Woman
+184,Control,Control,Non-Agentive,Neighbor stabbed 17 times during road rage incident with young mom; community members express devastation,1,Neighbor,,Mom,,0,0,,,,,,,,,,,
 50,Target,officers,Non-Agentive,Protesters shot during clash with officers outside Texas church service,27,Officers,,Protesters,,3,3,,,,,,,,,,,
 50,Target,student,Agentive,Student shoots and kills campus security guard in controversial incident,33,Security guard,,Student,,4,4,,,,,,,,,,,
 50,Control,Control,Agentive,Teacher chokes nurse after violent dispute at local daycare,14,Nurse,,Teacher,,4,3,,,,,,,,,,,
@@ -1661,8 +1661,8 @@ WorkerID,Type,Agent,Grammar,Stimulus,StimulusNum,Harm,Other Harm,Harmer,Other Ha
 67,Target,officers,Agentive,Officers shoot protesters during clash outside Texas church service,31,Protesters,,Officers,,2,1,,,,,,,,,,,
 67,Control,Control,Non-Agentive,Wife stabbed 36 times after fight with cheating husband,36,Wife,,Husband,,1,1,,,,,,,,,,,
 67,Target,man,Non-Agentive,Jacksonville police officer fatally shot during confrontation with man,18,Police officer,,Man,,1,2,,,,,,,,,,,
-67,Target,teacher,Agentive,Criminal probe focuses on school where teacher shot cop after fight,16,Cop,,Teacher,,2,3,,,,,,,,,,,
-67,Control,Control,Non-Agentive,Neighbor stabbed 17 times during road rage incident with young mom; community members express devastation,1,Neighbor,,Mom,,1,1,,3,3,Yes,Yes,No,No,Independent,55-64,White,Woman
+67,Target,teacher,Agentive,Criminal probe focuses on school where teacher shot cop after fight,16,Cop,,Teacher,,2,3,,3,3,Yes,Yes,No,No,Independent,55-64,White,Woman
+67,Control,Control,Non-Agentive,Neighbor stabbed 17 times during road rage incident with young mom; community members express devastation,1,Neighbor,,Mom,,1,1,,,,,,,,,,,
 80,Control,Control,Non-Agentive,Nurse choked after violent dispute with teacher at local daycare,20,Nurse,,Teacher,,4,4,,,,,,,,,,,
 80,Control,Control,Non-Agentive,Chicago superintendent assaulted after car accident with nurse,25,Superintendent,,Nurse,,1,1,,,,,,,,,,,
 80,Target,police officer,Non-Agentive,Jacksonville man fatally shot during confrontation with police officer,8,Man,,Police officer,,2,2,,,,,,,,,,,
@@ -1675,10 +1675,10 @@ WorkerID,Type,Agent,Grammar,Stimulus,StimulusNum,Harm,Other Harm,Harmer,Other Ha
 80,Target,cop,Agentive,Criminal probe focuses on school where cop shot teacher after fight,39,Teacher,,Cop,,0,0,,,,,,,,,,,
 80,Control,Control,Agentive,Waiter at Italian pizza shop sets restaurant owner on fire after shouting match,24,Owner,,Waiter,,4,4,,,,,,,,,,,
 80,Target,security guard,Non-Agentive,Student shot and killed in controversial incident with campus security guard,44,Student,,Security guard,,0,0,,,,,,,,,,,
-80,Target,club bouncer,Agentive,Club bouncer kills state trooper during shootout outside of popular bar,35,State trooper,,Club bouncer,,3,3,,,,,,,,,,,
+80,Target,club bouncer,Agentive,Club bouncer kills state trooper during shootout outside of popular bar,35,State trooper,,Club bouncer,,3,3,,4,2,Yes,Yes,Yes,Yes,Democratic,18-24,White,Man
 80,Target,protesters,Non-Agentive,Cops shot during Friday confrontation with protesters; dash cam footage to be released early next week,42,Cops,,Protesters,,4,4,,,,,,,,,,,
 80,Target,protesters,Agentive,Protesters shoot officers during clash outside Texas church service,46,Officers,,Protesters,,3,3,,,,,,,,,,,
-80,Control,Control,Non-Agentive,Indigenous community leader targeted in racist hate crime incident with vandal,15,Community leader,,Vandal,,0,0,,4,2,Yes,Yes,Yes,Yes,Democratic,18-24,White,Man
+80,Control,Control,Non-Agentive,Indigenous community leader targeted in racist hate crime incident with vandal,15,Community leader,,Vandal,,0,0,,,,,,,,,,,
 99,Control,Control,Agentive,Teacher chokes nurse after violent dispute at local daycare,14,Nurse,,Teacher,,4,4,,,,,,,,,,,
 99,Control,Control,Agentive,Cheating husband stabbed wife 36 times after fight,4,Wife,,Husband,,0,0,,,,,,,,,,,
 99,Control,Control,Agentive,Patient beats local doctor accused of fertility fraud during confrontation,7,Doctor,,Patient,,1,1,,,,,,,,,,,
@@ -1693,8 +1693,8 @@ WorkerID,Type,Agent,Grammar,Stimulus,StimulusNum,Harm,Other Harm,Harmer,Other Ha
 99,Target,teen,Agentive,Video footage shows teen shooting a county sheriff after confrontation; sparks outrage,10,Sheriff,,Teen,,4,4,,,,,,,,,,,
 99,Target,man,Non-Agentive,Jacksonville police officer fatally shot during confrontation with man,18,Police officer,,Man,,4,4,,,,,,,,,,,
 99,Target,protesters,Non-Agentive,Cops shot during Friday confrontation with protesters; dash cam footage to be released early next week,42,Cops,,Protesters,,4,4,,,,,,,,,,,
-99,Target,state trooper,Non-Agentive,Club bouncer killed during shootout with state trooper outside of popular bar,21,Club bouncer,,State trooper,,0,0,,,,,,,,,,,
-99,Control,Control,Non-Agentive,Drunk driver beaten after Cobb County crash with father,11,Driver,,Father,,1,1,,4,2,No,No,No,No,Independent,25-34,White,Woman
+99,Target,state trooper,Non-Agentive,Club bouncer killed during shootout with state trooper outside of popular bar,21,Club bouncer,,State trooper,,0,0,,4,2,No,No,No,No,Independent,25-34,White,Woman
+99,Control,Control,Non-Agentive,Drunk driver beaten after Cobb County crash with father,11,Driver,,Father,,1,1,,,,,,,,,,,
 197,Target,state trooper,Agentive,State trooper kills club bouncer during shootout outside popular bar,5,Club bouncer,,State trooper,,3,3,It is impossible to determine if anyone was at fault from a headline. The headline implied it was the state trooper's fault but law enforcement has been under fire for everything. I would have liked a different choice.,,,,,,,,,,
 197,Control,Control,Agentive,Teacher chokes nurse after violent dispute at local daycare,14,Nurse,,Teacher,,4,4,,,,,,,,,,,
 197,Target,man,Non-Agentive,Police chief killed in New Years Day shooting incident with fisherman,43,Police chief,,Fisherman,,4,4,'Odd headline and I would prefer another choice.'},,,,,,,,,,
@@ -1707,10 +1707,10 @@ WorkerID,Type,Agent,Grammar,Stimulus,StimulusNum,Harm,Other Harm,Harmer,Other Ha
 197,Target,teen,Non-Agentive,Video footage shows county sheriff shot after confrontation with teen; sparks outrage,45,Sheriff,,Teen,,4,4,'I would have chosen a different choice had it been available.'},,,,,,,,,,
 197,Control,Control,Non-Agentive,Indigenous community leader targeted in racist hate crime incident with vandal,15,Community leader,,Vandal,,0,0,'Difficult to choose an answer. I would have liked a different choice but it was still a hate crime.'},,,,,,,,,,
 197,Target,security guard,Non-Agentive,Student shot and killed in controversial incident with campus security guard,44,Student,,Security guard,,0,0,,,,,,,,,,,
-197,Target,officers,Agentive,Officers shoot protesters during clash outside Texas church service,31,Protesters,,Officers,,3,3,'Protesters often turn to violence and I would find them guilty because it involved a church.'},,,,,,,,,,
+197,Target,officers,Agentive,Officers shoot protesters during clash outside Texas church service,31,Protesters,,Officers,,3,3,'Protesters often turn to violence and I would find them guilty because it involved a church.'},1,5,Yes,Yes,No,Yes,Republican,55-64,White,Woman
 197,Control,Control,Agentive,Nurse assaults Chicago superintendent after car accident,0,Superintendent,,Nurse,,2,2,Tense situation but both are trained to handle difficult situations but I believe the nurse had a reason to assault him but she was guilty because violence doesn't usually improve a situation.,,,,,,,,,,
 197,Control,Control,Agentive,Waiter at Italian pizza shop sets restaurant owner on fire after shouting match,24,Owner,,Waiter,,4,4,,,,,,,,,,,
-197,Control,Control,Non-Agentive,Drunk driver beaten after Cobb County crash with father,11,Driver,,Father,,2,2,,1,5,Yes,Yes,No,Yes,Republican,55-64,White,Woman
+197,Control,Control,Non-Agentive,Drunk driver beaten after Cobb County crash with father,11,Driver,,Father,,2,2,,,,,,,,,,,
 181,Target,protesters,Non-Agentive,Officers shot during clash with protesters outside Texas church service,9,Officers,,Protesters,,3,3,,,,,,,,,,,
 181,Control,Control,Agentive,Young mom stabs neighbor 17 times during road rage incident; community members express devastation,34,Neighbor,,Mom,,0,0,,,,,,,,,,,
 181,Target,cop,Agentive,Criminal probe focuses on school where cop shot teacher after fight,39,Teacher,,Cop,,1,2,,,,,,,,,,,
@@ -1725,8 +1725,8 @@ WorkerID,Type,Agent,Grammar,Stimulus,StimulusNum,Harm,Other Harm,Harmer,Other Ha
 181,Target,state trooper,Non-Agentive,Club bouncer killed during shootout with state trooper outside of popular bar,21,Club bouncer,,State trooper,,1,1,,,,,,,,,,,
 181,Control,Control,Agentive,Teacher chokes nurse after violent dispute at local daycare,14,Nurse,,Teacher,,3,2,,,,,,,,,,,
 181,Target,man,Agentive,Fisherman kills police chief in New Years Day shooting incident,22,Police chief,,Fisherman,,4,4,,,,,,,,,,,
-181,Target,teen,Non-Agentive,Video footage shows county sheriff shot after confrontation with teen; sparks outrage,45,Sheriff,,Teen,,1,3,,,,,,,,,,,
-181,Control,Control,Non-Agentive,Local doctor accused of fertility fraud beaten during confrontation with patient,40,Doctor,,Patient,,1,1,,3,1,Yes,Yes,No,Yes,Independent,18-24,White,Man
+181,Target,teen,Non-Agentive,Video footage shows county sheriff shot after confrontation with teen; sparks outrage,45,Sheriff,,Teen,,1,3,,3,1,Yes,Yes,No,Yes,Independent,18-24,White,Man
+181,Control,Control,Non-Agentive,Local doctor accused of fertility fraud beaten during confrontation with patient,40,Doctor,,Patient,,1,1,,,,,,,,,,,
 142,Target,man,Non-Agentive,Jacksonville police officer fatally shot during confrontation with man,18,Police officer,,Man,,4,4,,,,,,,,,,,
 142,Target,protesters,Non-Agentive,Cops shot during Friday confrontation with protesters; dash cam footage to be released early next week,42,Cops,,Protesters,,2,2,,,,,,,,,,,
 142,Control,Control,Non-Agentive,Neighbor stabbed 17 times during road rage incident with young mom; community members express devastation,1,Neighbor,,Mom,,1,2,,,,,,,,,,,
@@ -1757,8 +1757,8 @@ WorkerID,Type,Agent,Grammar,Stimulus,StimulusNum,Harm,Other Harm,Harmer,Other Ha
 138,Control,Control,Agentive,Waiter at Italian pizza shop sets restaurant owner on fire after shouting match,24,Owner,,Waiter,,4,4,'I canðððt think of any situation where the only option to protect yourself or someone else on fire is the right one,,,,,,,,,,
 138,Target,police chief,Agentive,Police chief kills fisherman in New Years Day shooting incident,32,Fisherman,,Police chief,,2,2,'Iðððm going with the possibility that the fisherman may have also been armed and brandished a weapon,,,,,,,,,,
 138,Control,Control,Non-Agentive,Drunk driver beaten after Cobb County crash with father,11,Driver,,,The headline doesnðððt say the beating was done by the father. Could be anyone else at the scene,3,3,'My previous caveats apply; the headline doesnðððt say who did the beating. Iðððm more inclined to suspect a drunk person of being violent but itðððs not certain. '},,,,,,,,,,
-138,Target,state trooper,Agentive,State trooper kills club bouncer during shootout outside popular bar,5,Club bouncer,,,The shootout may have been between the trooper and some other outside the bar and the bouncer was collateral damage. '},1,1,,,,,,,,,,,
-138,Control,Control,Agentive,Patient beats local doctor accused of fertility fraud during confrontation,7,Doctor,,Patient,,2,2,,5,1,No,No,No,No,Democratic,55-64,White,Woman
+138,Target,state trooper,Agentive,State trooper kills club bouncer during shootout outside popular bar,5,Club bouncer,,,The shootout may have been between the trooper and some other outside the bar and the bouncer was collateral damage. '},1,1,,5,1,No,No,No,No,Democratic,55-64,White,Woman
+138,Control,Control,Agentive,Patient beats local doctor accused of fertility fraud during confrontation,7,Doctor,,Patient,,2,2,,,,,,,,,,,
 11,Target,police officer,Non-Agentive,Jacksonville man fatally shot during confrontation with police officer,8,Man,,Police officer,,1,2,,,,,,,,,,,
 11,Control,Control,Non-Agentive,Restaurant owner of Italian pizza shop set on fire after shouting match with waiter,6,Owner,,Waiter,,3,3,,,,,,,,,,,
 11,Control,Control,Agentive,Patient beats local doctor accused of fertility fraud during confrontation,7,Doctor,,Patient,,3,3,,,,,,,,,,,
@@ -1818,11 +1818,11 @@ WorkerID,Type,Agent,Grammar,Stimulus,StimulusNum,Harm,Other Harm,Harmer,Other Ha
 167,Control,Control,Non-Agentive,Wife stabbed 36 times after fight with cheating husband,36,Wife,,Husband,,0,0,'Speculation it was the husband in both cases with no further knowledge of circumstances around the event. '},,,,,,,,,,
 167,Target,cop,Agentive,Criminal probe focuses on school where cop shot teacher after fight,39,Teacher,,Cop,,0,2,I think the copy may be responsible. But without further context on the circumstances,,,,,,,,,,
 167,Control,Control,Non-Agentive,Chicago superintendent assaulted after car accident with nurse,25,Superintendent,,,The headline doesn't say.,2,2,Until the article is read,,,,,,,,,,
-167,Target,cops,Non-Agentive,Protesters shot during Friday confrontation with cops; dash cam footage to be released early next week,19,Protesters,,,The headline doesn't say who did the shooting. Only that the protesters and cops had an altercation.,2,2,There's not enough information in the headline to assign blame or responsibility.,,,,,,,,,,
+167,Target,cops,Non-Agentive,Protesters shot during Friday confrontation with cops; dash cam footage to be released early next week,19,Protesters,,,The headline doesn't say who did the shooting. Only that the protesters and cops had an altercation.,2,2,There's not enough information in the headline to assign blame or responsibility.,4,2,No,No,No,No,Democratic,65+,White,Woman
 167,Control,Control,Non-Agentive,Restaurant owner of Italian pizza shop set on fire after shouting match with waiter,6,Owner,,,The headline doesn't specify how the owner caught on fire. Will need to read the article.,2,2,Can't assign responsibility or blame without reading the article to find out what happened. How does someone catch on fire after a shouting match with another person? It's very odd.,,,,,,,,,,
 167,Control,Control,Agentive,Father beats drunk driver after Cobb County crash,37,Driver,,Driver,,4,4,Again,,,,,,,,,,
 167,Control,Control,Agentive,Racist vandal targets Indigenous community leader in hate crime incident,23,Community leader,,Vandal,,0,0,,,,,,,,,,,
-167,Control,Control,Agentive,Patient beats local doctor accused of fertility fraud during confrontation,7,Doctor,,Patient,,4,0,,4,2,No,No,No,No,Democratic,65+,White,Woman
+167,Control,Control,Agentive,Patient beats local doctor accused of fertility fraud during confrontation,7,Doctor,,Patient,,4,0,,,,,,,,,,,
 150,Control,Control,Non-Agentive,Wife stabbed 36 times after fight with cheating husband,36,Wife,,Husband,,0,0,The headline didn't specifically say that the husband is the one who stabbed the wife.,,,,,,,,,,
 150,Control,Control,Non-Agentive,Nurse choked after violent dispute with teacher at local daycare,20,Nurse,,Teacher,,3,3,,,,,,,,,,,
 150,Target,protesters,Agentive,Protesters shoot officers during clash outside Texas church service,46,Officers,,Protesters,,3,3,,,,,,,,,,,
@@ -1851,10 +1851,10 @@ WorkerID,Type,Agent,Grammar,Stimulus,StimulusNum,Harm,Other Harm,Harmer,Other Ha
 157,Target,state trooper,Non-Agentive,Club bouncer killed during shootout with state trooper outside of popular bar,21,Club bouncer,,State trooper,,4,4,,,,,,,,,,,
 157,Control,Control,Non-Agentive,Nurse choked after violent dispute with teacher at local daycare,20,Nurse,,Teacher,,3,4,,,,,,,,,,,
 157,Target,protesters,Non-Agentive,Cops shot during Friday confrontation with protesters; dash cam footage to be released early next week,42,Cops,,Protesters,,3,4,,,,,,,,,,,
-157,Target,teacher,Agentive,Criminal probe focuses on school where teacher shot cop after fight,16,Cop,,Teacher,,3,3,,,,,,,,,,,
+157,Target,teacher,Agentive,Criminal probe focuses on school where teacher shot cop after fight,16,Cop,,Teacher,,3,3,,3,3,Yes,Yes,No,Yes,Independent,65+,White,Woman
 157,Control,Control,Non-Agentive,Drunk driver beaten after Cobb County crash with father,11,Driver,,,An angry mob I assume.'},2,2,'There is so little detail given that its impossible to understand what happened,,,,,,,,,,
 157,Control,Control,Non-Agentive,Local doctor accused of fertility fraud beaten during confrontation with patient,40,Doctor,,Patient,,2,2,,,,,,,,,,,
-157,Control,Control,Agentive,Young mom stabs neighbor 17 times during road rage incident; community members express devastation,34,,who other': 'I mistyped,,Not specified.'},0,0,,3,3,Yes,Yes,No,Yes,Independent,65+,White,Woman
+157,Control,Control,Agentive,Young mom stabs neighbor 17 times during road rage incident; community members express devastation,34,,who other': 'I mistyped,,Not specified.'},0,0,,,,,,,,,,,
 151,Control,Control,Non-Agentive,Restaurant owner of Italian pizza shop set on fire after shouting match with waiter,6,Owner,,,i forgot'},4,4,,,,,,,,,,,
 151,Target,state trooper,Non-Agentive,Club bouncer killed during shootout with state trooper outside of popular bar,21,Club bouncer,,State trooper,,2,2,,,,,,,,,,,
 151,Control,Control,Non-Agentive,Indigenous community leader targeted in racist hate crime incident with vandal,15,Community leader,,Vandal,,0,0,,,,,,,,,,,
@@ -1884,9 +1884,9 @@ WorkerID,Type,Agent,Grammar,Stimulus,StimulusNum,Harm,Other Harm,Harmer,Other Ha
 198,Control,Control,Non-Agentive,Wife stabbed 36 times after fight with cheating husband,36,Husband,,,they both caused harm toeach other in different ways. one was more extreme and physical'},2,1,,,,,,,,,,,
 198,Target,club bouncer,Non-Agentive,State trooper killed during shootout with club bouncer outside popular bar,47,State trooper,,Club bouncer,,2,3,,,,,,,,,,,
 198,Control,Control,Agentive,Nurse assaults Chicago superintendent after car accident,0,Superintendent,,Nurse,,2,1,,,,,,,,,,,
-198,Target,police chief,Agentive,Police chief kills fisherman in New Years Day shooting incident,32,Fisherman,,Police chief,,1,2,,,,,,,,,,,
+198,Target,police chief,Agentive,Police chief kills fisherman in New Years Day shooting incident,32,Fisherman,,Police chief,,1,2,,2,4,Yes,Yes,No,Yes,Independent,35-44,Mixed,Woman
 198,Control,Control,Agentive,Father beats drunk driver after Cobb County crash,37,Driver,,Father,,4,3,,,,,,,,,,,
-198,Control,Control,Non-Agentive,Neighbor stabbed 17 times during road rage incident with young mom; community members express devastation,1,Neighbor,,Mom,,3,2,,2,4,Yes,Yes,No,Yes,Independent,35-44,Mixed,Woman
+198,Control,Control,Non-Agentive,Neighbor stabbed 17 times during road rage incident with young mom; community members express devastation,1,Neighbor,,Mom,,3,2,,,,,,,,,,,
 190,Control,Control,Non-Agentive,Drunk driver beaten after Cobb County crash with father,11,Driver,,Father,,3,1,,,,,,,,,,,
 190,Control,Control,Non-Agentive,Indigenous community leader targeted in racist hate crime incident with vandal,15,Community leader,,Vandal,,0,0,,,,,,,,,,,
 190,Target,protesters,Agentive,Protesters shoot officers during clash outside Texas church service,46,Officers,,Protesters,,4,4,,,,,,,,,,,
@@ -1901,8 +1901,8 @@ WorkerID,Type,Agent,Grammar,Stimulus,StimulusNum,Harm,Other Harm,Harmer,Other Ha
 190,Target,man,Non-Agentive,Jacksonville police officer fatally shot during confrontation with man,18,Police officer,,Man,,3,3,,,,,,,,,,,
 190,Target,sheriff,Non-Agentive,Video footage shows teen shot after confrontation with county sheriff; sparks outrage,30,Teen,,Sheriff,,1,1,,,,,,,,,,,
 190,Control,Control,Agentive,Cheating husband stabbed wife 36 times after fight,4,Wife,,Husband,,0,0,,,,,,,,,,,
-190,Target,police chief,Agentive,Police chief kills fisherman in New Years Day shooting incident,32,Fisherman,,Police chief,,1,1,,,,,,,,,,,
-190,Control,Control,Non-Agentive,Nurse choked after violent dispute with teacher at local daycare,20,Nurse,,Teacher,,3,4,,4,2,No,Yes,Yes,No,Independent,65+,White,Woman
+190,Target,police chief,Agentive,Police chief kills fisherman in New Years Day shooting incident,32,Fisherman,,Police chief,,1,1,,4,2,No,Yes,Yes,No,Independent,65+,White,Woman
+190,Control,Control,Non-Agentive,Nurse choked after violent dispute with teacher at local daycare,20,Nurse,,Teacher,,3,4,,,,,,,,,,,
 168,Target,protesters,Agentive,Protesters shoot cops during Friday confrontation; dash cam footage to be released early next week,13,Cops,,Protesters,,3,3,,,,,,,,,,,
 168,Target,student,Agentive,Student shoots and kills campus security guard in controversial incident,33,Security guard,,Student,,4,4,,,,,,,,,,,
 168,Control,Control,Agentive,Patient beats local doctor accused of fertility fraud during confrontation,7,Doctor,,Patient,,1,1,,,,,,,,,,,
@@ -1949,8 +1949,8 @@ WorkerID,Type,Agent,Grammar,Stimulus,StimulusNum,Harm,Other Harm,Harmer,Other Ha
 147,Control,Control,Agentive,Father beats drunk driver after Cobb County crash,37,Driver,,Father,,2,2,'The father should not have reacted violently,,,,,,,,,,
 147,Target,teen,Agentive,Video footage shows teen shooting a county sheriff after confrontation; sparks outrage,10,Sheriff,,Teen,,3,3,The teen shouldn't have reacted by shooting,,,,,,,,,,
 147,Control,Control,Non-Agentive,Wife stabbed 36 times after fight with cheating husband,36,Wife,,Husband,,0,0,,,,,,,,,,,
-147,Target,police chief,Agentive,Police chief kills fisherman in New Years Day shooting incident,32,Fisherman,,Police chief,,1,1,There might have been some reason for the shooting,,,,,,,,,,
-147,Control,Control,Non-Agentive,Neighbor stabbed 17 times during road rage incident with young mom; community members express devastation,1,Neighbor,,Mom,,2,2,The headline doesn't say who started the road rage incident,3,3,Yes,Yes,Yes,Yes,Independent,25-34,White,Woman
+147,Target,police chief,Agentive,Police chief kills fisherman in New Years Day shooting incident,32,Fisherman,,Police chief,,1,1,There might have been some reason for the shooting,3,3,Yes,Yes,Yes,Yes,Independent,25-34,White,Woman
+147,Control,Control,Non-Agentive,Neighbor stabbed 17 times during road rage incident with young mom; community members express devastation,1,Neighbor,,Mom,,2,2,The headline doesn't say who started the road rage incident,,,,,,,,,,
 76,Target,man,Agentive,Fisherman kills police chief in New Years Day shooting incident,22,Police chief,,Fisherman,,3,4,,,,,,,,,,,
 76,Control,Control,Non-Agentive,Drunk driver beaten after Cobb County crash with father,11,Driver,,Father,,2,2,,,,,,,,,,,
 76,Control,Control,Agentive,Patient beats local doctor accused of fertility fraud during confrontation,7,Patient,,Doctor,,4,4,,,,,,,,,,,
@@ -1992,13 +1992,13 @@ WorkerID,Type,Agent,Grammar,Stimulus,StimulusNum,Harm,Other Harm,Harmer,Other Ha
 14,Target,police officer,Agentive,Jacksonville police officer fatally shoots man during confrontation,26,Man,,Police officer,,1,1,,,,,,,,,,,
 14,Control,Control,Non-Agentive,Indigenous community leader targeted in racist hate crime incident with vandal,15,Community leader,,Vandal,,0,0,,,,,,,,,,,
 14,Control,Control,Non-Agentive,Restaurant owner of Italian pizza shop set on fire after shouting match with waiter,6,Owner,,Waiter,,4,4,,,,,,,,,,,
-14,Target,teen,Agentive,Video footage shows teen shooting a county sheriff after confrontation; sparks outrage,10,Sheriff,,Teen,,4,4,,,,,,,,,,,
+14,Target,teen,Agentive,Video footage shows teen shooting a county sheriff after confrontation; sparks outrage,10,Sheriff,,Teen,,4,4,,3,2,No,Yes,No,Yes,Independent,18-24,White,Man
 14,Target,cop,Agentive,Criminal probe focuses on school where cop shot teacher after fight,39,Teacher,,Cop,,0,0,,,,,,,,,,,
 14,Target,officers,Non-Agentive,Protesters shot during clash with officers outside Texas church service,27,Protesters,,Officers,,0,0,,,,,,,,,,,
 14,Control,Control,Agentive,Teacher chokes nurse after violent dispute at local daycare,14,Nurse,,Teacher,,4,4,,,,,,,,,,,
 14,Control,Control,Agentive,Young mom stabs neighbor 17 times during road rage incident; community members express devastation,34,Neighbor,,Mom,,0,0,,,,,,,,,,,
 14,Control,Control,Agentive,Cheating husband stabbed wife 36 times after fight,4,Wife,,Husband,,0,0,,,,,,,,,,,
-14,Control,Control,Non-Agentive,Drunk driver beaten after Cobb County crash with father,11,Driver,,Father,,3,3,,3,2,No,Yes,No,Yes,Independent,18-24,White,Man
+14,Control,Control,Non-Agentive,Drunk driver beaten after Cobb County crash with father,11,Driver,,Father,,3,3,,,,,,,,,,,
 101,Control,Control,Non-Agentive,Drunk driver beaten after Cobb County crash with father,11,Driver,,Driver,,3,3,,,,,,,,,,,
 101,Control,Control,Non-Agentive,Chicago superintendent assaulted after car accident with nurse,25,Superintendent,,Nurse,,1,1,,,,,,,,,,,
 101,Control,Control,Agentive,Racist vandal targets Indigenous community leader in hate crime incident,23,Community leader,,Vandal,,1,1,,,,,,,,,,,
@@ -2015,22 +2015,6 @@ WorkerID,Type,Agent,Grammar,Stimulus,StimulusNum,Harm,Other Harm,Harmer,Other Ha
 101,Target,state trooper,Agentive,State trooper kills club bouncer during shootout outside popular bar,5,Club bouncer,,State trooper,,1,1,,,,,,,,,,,
 101,Target,cop,Non-Agentive,Criminal probe focuses on school where teacher was shot after fight with cop,41,Teacher,,Cop,,1,1,,,,,,,,,,,
 101,Target,protesters,Agentive,Protesters shoot officers during clash outside Texas church service,46,Officers,,Protesters,,3,3,,1,4,Yes,Yes,Yes,Yes,Republican,55-64,White,Woman
-Å,Control,Control,Non-Agentive,Drunk driver beaten after Cobb County crash with father,11,Driver,,,It doesnðððt state '},2,2,,,,,,,,,,,
-Å,Control,Control,Agentive,Patient beats local doctor accused of fertility fraud during confrontation,7,Doctor,,Patient,,2,2,,,,,,,,,,,
-Å,Control,Control,Agentive,Cheating husband stabbed wife 36 times after fight,4,Wife,,Husband,,0,0,,,,,,,,,,,
-Å,Control,Control,Non-Agentive,Restaurant owner of Italian pizza shop set on fire after shouting match with waiter,6,Owner,,Waiter,,2,2,,,,,,,,,,,
-Å,Target,teen,Agentive,Video footage shows teen shooting a county sheriff after confrontation; sparks outrage,10,Sheriff,,Teen,,2,2,,,,,,,,,,,
-Å,Control,Control,Agentive,Nurse assaults Chicago superintendent after car accident,0,Superintendent,,Nurse,,0,0,,,,,,,,,,,
-Å,Control,Control,Non-Agentive,Indigenous community leader targeted in racist hate crime incident with vandal,15,Community leader,,Vandal,,0,0,,,,,,,,,,,
-Å,Control,Control,Non-Agentive,Neighbor stabbed 17 times during road rage incident with young mom; community members express devastation,1,Neighbor,,Mom,,0,0,,,,,,,,,,,
-Å,Target,cops,Agentive,Cops shoot protesters during Friday confrontation; dash cam footage to be released early next week,28,Protesters,,Cops,,1,1,,,,,,,,,,,
-Å,Target,student,Agentive,Student shoots and kills campus security guard in controversial incident,33,Security guard,,Student,,2,2,'It says the issue is controversial so we donðððt really know the circumstances surrounding it to place blame'},,,,,,,,,,
-Å,Target,club bouncer,Non-Agentive,State trooper killed during shootout with club bouncer outside popular bar,47,State trooper,,Club bouncer,,2,2,,,,,,,,,,,
-Å,Target,police chief,Agentive,Police chief kills fisherman in New Years Day shooting incident,32,Fisherman,,Police chief,,2,2,'We donðððt know the circumstances around the incident '},,,,,,,,,,
-Å,Target,police officer,Non-Agentive,Jacksonville man fatally shot during confrontation with police officer,8,Man,,Police officer,,2,2,,,,,,,,,,,
-Å,Target,protesters,Non-Agentive,Officers shot during clash with protesters outside Texas church service,9,Officers,,Protesters,,2,2,,,,,,,,,,,
-Å,Target,cop,Non-Agentive,Criminal probe focuses on school where teacher was shot after fight with cop,41,Teacher,,Cop,,2,2,,,,,,,,,,,
-Å,Control,Control,Agentive,Teacher chokes nurse after violent dispute at local daycare,14,Nurse,,Teacher,,2,2,,3,3,No,No,No,No,Independent,35-44,White,Woman
 95,Control,Control,Non-Agentive,Drunk driver beaten after Cobb County crash with father,11,Driver,,,It doesnðððt state '},2,2,,,,,,,,,,,
 95,Control,Control,Agentive,Patient beats local doctor accused of fertility fraud during confrontation,7,Doctor,,Patient,,2,2,,,,,,,,,,,
 95,Control,Control,Agentive,Cheating husband stabbed wife 36 times after fight,4,Wife,,Husband,,0,0,,,,,,,,,,,
@@ -2045,5 +2029,5 @@ WorkerID,Type,Agent,Grammar,Stimulus,StimulusNum,Harm,Other Harm,Harmer,Other Ha
 95,Target,police chief,Agentive,Police chief kills fisherman in New Years Day shooting incident,32,Fisherman,,Police chief,,2,2,'We donðððt know the circumstances around the incident '},,,,,,,,,,
 95,Target,police officer,Non-Agentive,Jacksonville man fatally shot during confrontation with police officer,8,Man,,Police officer,,2,2,,,,,,,,,,,
 95,Target,protesters,Non-Agentive,Officers shot during clash with protesters outside Texas church service,9,Officers,,Protesters,,2,2,,,,,,,,,,,
-95,Target,cop,Non-Agentive,Criminal probe focuses on school where teacher was shot after fight with cop,41,Teacher,,Cop,,2,2,,,,,,,,,,,
-95,Control,Control,Agentive,Teacher chokes nurse after violent dispute at local daycare,14,Nurse,,Teacher,,2,2,,3,3,No,No,No,No,Independent,35-44,White,Woman
+95,Target,cop,Non-Agentive,Criminal probe focuses on school where teacher was shot after fight with cop,41,Teacher,,Cop,,2,2,,3,3,No,No,No,No,Independent,35-44,White,Woman
+95,Control,Control,Agentive,Teacher chokes nurse after violent dispute at local daycare,14,Nurse,,Teacher,,2,2,,,,,,,,,,,
