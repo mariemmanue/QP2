@@ -111,6 +111,8 @@ levels(EXP1_no_NA$police.honest) <- list('1' = 'Yes', '0' = 'No')
 levels(EXP1_no_NA$police.rights) <- list('1' = 'Yes', '0' = 'No')
 levels(EXP1_no_NA$police.listen) <- list('1' = 'Yes', '0' = 'No')
 levels(EXP1_no_NA$political.party) <- list('5' = 'Democratic', '3' = 'Independent', '2' = 'Libertarian','4' = 'Green','1' = 'Republican')
+levels(EXP1_no_NA$gender) <- list('NB' = 'Non-binary/Non-conforming', 'M' = 'Man', 'W' = 'Woman')
+
 levels(EXP1_no_NA$conservative) <- list('1' = '5', '2' = '4', '3' = '3','4' = '2', '5' = '1')
 
 
@@ -133,8 +135,8 @@ summary(EXP1_no_NA2.fit, standardized=TRUE, fit.measures=TRUE)
 
 predicted_values <- lavPredict(EXP1_no_NA2.fit)
 predicted_values <- as.data.frame(predicted_values)
-politicallean <- predicted_values[["politicallean"]]
-trust1 <- predicted_values[["trust1"]]
+leanings <- predicted_values[["politicallean"]]
+trust <- predicted_values[["trust1"]]
 semPaths(EXP1_no_NA2.fit, "std")
 ```
 
@@ -155,6 +157,159 @@ cd22 # composite reliability for trust
 
 
 
+```
+# Sanity Checks
+## compare who harmer is 
+```{r}
+Target_Harmers <- target_data %>% 
+  filter(!tolower(target_data$Agent) %in% tolower(target_data$Harmer))
+```
+
+
+##trust vs political 
+```{r}
+correlation <- cor(EXP1$trust, EXP1$leanings)
+correlation
+EXP1 %>% 
+  group_by(trust, leanings) %>%
+  ggplot(aes(x = trust, y=leanings)) +
+  geom_point(position="identity", stat = "identity") +
+  geom_line() +
+  geom_smooth(method = "lm", se = TRUE)  +
+  labs(x="Trust Measure",y="Political leaning Measure")
+```
+
+
+# Demographics
+## race, age, gender
+```{r}
+
+as.numeric(as.character(count_demo$count))
+table_demo <- aggregate(count_demo$count, list(count_demo$race, count_demo$age, count_demo$political.party, count_demo$gender), sum)
+colnames(table_demo)[1] = "Race"
+colnames(table_demo)[2] = "Age"
+colnames(table_demo)[3] = "Political"
+colnames(table_demo)[4] = "Gender"
+colnames(table_demo)[5] = "Count"
+table_demo$Political <- as.factor(table_demo$Political)
+levels(table_demo$Political) <- list('Democratic' = '5', 'Independent' =  '3', 'Libertarian' = '2','Green' = '4', 'Republican' = '1')
+levels(table_demo$Race) <- list('Asian' = 'Asian / Pacific Islander', 'Black' =  'Black', 'White' = 'White','Mixed' = 'Mixed', 'Native' = 'American Indian or Alaskan Native', "Hispanic" = "Hispanic")
+
+
+summary(table_demo$Race)
+summary(table_demo$Age)
+summary(table_demo$Political)
+summary(table_demo$Gender)
+
+table_demo  %>%
+  group_by(Race, Age, Political,Gender)%>%
+  summarise(Count) %>%
+  arrange(Count)
+
+table_demo %>% 
+  group_by(Race, Political,Age,Gender) %>%
+  summarise(Count) %>%
+  arrange(Count)  %>%
+  ggplot(aes(x = Gender, y=Count)) +
+  geom_bar(aes(fill = Political), position="stack", stat = "identity") +
+  facet_grid(Race~Age) + 
+  labs(y="Count",x="Gender")
+
+
+table_demo %>% 
+  group_by(Race, Political,Age,Gender) %>%
+  summarise(Count) %>%
+  arrange(Count)  %>%
+  ggplot(aes(x = Race, y=Count)) +
+  geom_bar(aes(fill = Political), position="stack", stat = "identity") +
+  scale_x_discrete(guide = guide_axis(n.dodge=3)) +
+  facet_grid(~Gender) + 
+  labs(y="Count",x="Race")
+
+
+table_demo %>% 
+  group_by(Race, Political,Age,Gender) %>%
+  summarise(Count) %>%
+  arrange(Count)  %>%
+  ggplot(aes(x = Race, y=Count)) +
+  geom_bar(aes(fill = Political), position="stack", stat = "identity") +
+  scale_x_discrete(guide = guide_axis(n.dodge=3)) +
+  facet_grid(~Age) + 
+  labs(y="Count",x="Race")
+
+
+table_demo %>% 
+  group_by(Race, Political,Age,Gender) %>%
+  summarise(Count) %>%
+  arrange(Count)  %>%
+  ggplot(aes(x = Gender, y=Count)) +
+  geom_bar(aes(fill = Political), position="stack", stat = "identity") +
+  scale_x_discrete(guide = guide_axis(n.dodge=3)) +
+  facet_grid(~Age) + 
+  labs(y="Count",x="Race")
+```
+
+
+
+## race x trust
+```{r}
+EXP1_no_NA %>% 
+  group_by(trust, race, cop_people) %>%
+  ggplot(aes(x = trust, y = race)) +
+  geom_point()
+```
+
+## party x trust
+```{r}
+EXP1_no_NA %>% 
+  group_by(trust, political.party, cop_people) %>%
+  ggplot(aes(x = trust, y = political.party)) +
+  geom_point()
+```
+
+
+##Blame
+
+### race
+```{r}
+EXP1_no_NA %>% 
+  group_by(trust, race, cop_people) %>%
+  summarise(blame_mean = mean(Blame))  %>% 
+  ggplot(aes(x = trust, y=blame_mean)) +
+  geom_point(position="identity", stat = "identity") +
+  geom_line() +
+  geom_smooth(method = "lm", se = TRUE)  +
+  facet_grid(cop_people~race) +
+  labs(x="Trust Measure",y="Mean Blame Rating")
+```
+
+
+
+### political
+```{r}
+EXP1_no_NA %>% 
+  group_by(trust, political.party, cop_people) %>%
+  summarise(blame_mean = mean(Blame))  %>% 
+  ggplot(aes(x = trust, y=blame_mean)) +
+  geom_point(position="identity", stat = "identity") +
+  geom_line() +
+  geom_smooth(method = "lm", se = TRUE)  +
+  facet_grid(cop_people~political.party) +
+  labs(x="Trust Measure",y="Mean Blame Rating")
+```
+
+
+### gender
+```{r}
+EXP1_no_NA %>% 
+  group_by(trust, gender, cop_people) %>%
+  summarise(blame_mean = mean(Blame))  %>% 
+  ggplot(aes(x = trust, y=blame_mean)) +
+  geom_point(position="identity", stat = "identity") +
+  geom_line() +
+  geom_smooth(method = "lm", se = TRUE)  +
+  facet_grid(cop_people~gender) +
+  labs(x="Trust Measure",y="Mean Blame Rating")
 ```
 
 
@@ -202,6 +357,8 @@ EXP1$trust <- EXP1$WorkerID # save worker ID to trust column
 EXP1$trust <- as.factor(EXP1$trust) # factor it up 
 
 EXP1$trust = trustsdf$trusts[na.omit(match(EXP1$trust,trustsdf$WorkerID))] #save trust to EXP1
+
+EXP1_no_NA  <- na.omit(EXP1)
 
 target_data <- EXP1 %>% filter(Type == "Target") 
 biger_model = lmer(target_data$Blame ~ Grammar*cop_people*trust + (1+Grammar*cop_people|Stimulus) + 
@@ -267,6 +424,56 @@ target_data %>%
 
 # Control:Blame
 ##Linear Regression
+
+### cop or people vs control
+```{r}
+EXP1cop <-filter(EXP1, !(EXP1$Type == "Target" & EXP1$cop_people == "Man"))
+just_people <- EXP1 %>% filter(cop_people == "Man")
+
+just_people_lm = lmer(just_people$Blame ~ Grammar*Type + (1+Grammar*Type|Stimulus) + 
+(1+Grammar*Type|WorkerID), data = just_people)
+summary(just_people_lm)
+
+EXP1cop_lm = lmer(EXP1cop$Blame ~ Grammar*Type + (1+Grammar*Type|Stimulus) + 
+(1+Grammar*Type|WorkerID), data = EXP1cop)
+summary(EXP1cop_lm)
+
+
+```
+
+
+
+
+### Big Model
+```{r}
+big_model_both = lmer(EXP1$Blame ~ Grammar*Type + (1+Grammar*Type|Stimulus) + 
+(1+Grammar*Type|WorkerID), data = EXP1)
+summary(big_model_both)
+```
+
+### trust + Big Model
+```{r}
+big_model_trust = lmer(EXP1$Blame ~ Grammar*Type*trust + (1+Grammar*Type|Stimulus) + 
+(1+Grammar*Type|WorkerID), data = EXP1)
+summary(big_model_trust)
+```
+### trust vs cop vs people
+```{r}
+EXP1cop <-filter(EXP1, !(EXP1$Type == "Target" & EXP1$cop_people == "Man"))
+just_people <- EXP1 %>% filter(cop_people == "Man")
+
+trust_model_cop = lmer(EXP1cop$Blame ~ Grammar*Type*trust + (1+Grammar*Type|Stimulus) + 
+(1+Grammar*Type|WorkerID), data = EXP1cop)
+summary(trust_model_cop)
+
+
+trust_model_people = lmer(just_people$Blame ~ Grammar*Type*trust + (1+Grammar*Type|Stimulus) + 
+(1+Grammar*Type|WorkerID), data = just_people)
+summary(trust_model_people)
+
+```
+
+
 ##Plots
 ###Agentivity
 ```{r mean blame/responsibility rating as a function of agentivity}
@@ -277,6 +484,7 @@ EXP1 %>%
   geom_bar(position="dodge", stat = "identity",fill = c("wheat", "saddlebrown", "darkgoldenrod", "lightsalmon4")) +
   scale_x_discrete(guide = guide_axis(n.dodge=3))+
   geom_errorbar(position = position_dodge(width = .09), aes(ymax = blame_mean + ci.high(blame_mean), ymin= blame_mean - ci.low(blame_mean)), width=0.25) +
+      geom_errorbar(position = position_dodge(width = .09), aes(ymax = blame_mean + ci.high(blame_mean), ymin= blame_mean - ci.low(blame_mean)), width=0.25) +
   facet_wrap(~Type, nrow=1) +
   labs(y="Mean Blame Rating",x="Agentivity")
 ```
@@ -289,6 +497,7 @@ EXP1 %>%
   ggplot(aes(x = cop_people, y=blame_mean)) +
   geom_bar(position="dodge", stat = "identity", fill = c("wheat", "saddlebrown", "darkgoldenrod")) +
   scale_x_discrete(guide = guide_axis(n.dodge=3)) +
+    geom_errorbar(position = position_dodge(width = .09), aes(ymax = blame_mean + ci.high(blame_mean), ymin= blame_mean - ci.low(blame_mean)), width=0.25) +
   facet_wrap(~Type, nrow=1, scales = "free") +
   labs(y="Mean Blame Rating",x="Agent Identity")
 ```
@@ -306,36 +515,162 @@ EXP1 %>%
   labs(y="Mean Blame Rating",x="Agent Identity")
 ```
 
+
+
+
+
+
 #Target: Responsibility
 ##Linear Regression
+### Big Model
+```{r}
+target_data <- EXP1 %>% filter(Type == "Target") 
+big_model_response = lmer(target_data$responsible ~ Grammar*cop_people + (1+Grammar*cop_people|Stimulus) + 
+(1+Grammar*cop_people|WorkerID), data = target_data)
+summary(big_model_response)
+```
+
+###Trust + Big Model
+```{r}
+target_data <- EXP1 %>% filter(Type == "Target") 
+politicallean <- predicted_values[["politicallean"]]
+trust1 <- predicted_values[["trust1"]]
+participant <- c(unique(target_data$WorkerID)) # save participant IDs 
+
+
+
+#political leaning 
+leanings <- c(politicallean) 
+names(leanings) <- participant # mapID to vector of values
+
+leaningsdf <- as.data.frame(leanings) # turn into data frame
+leaningsdf$WorkerID = participant # save worker ID to data frame for trust 
+
+EXP1$leanings <- EXP1$WorkerID # save worker ID to trust column 
+EXP1$leanings <- as.factor(EXP1$leanings) # factor it up 
+
+ EXP1$leanings = leaningsdf$leanings[na.omit(match(EXP1$leanings,leaningsdf$WorkerID))] #save trust to EXP1
+
+
+#trust 
+trusts <- c(trust1) 
+names(trusts) <- participant # mapID to vector of values
+
+trustsdf <- as.data.frame(trusts) # turn into data frame
+trustsdf$WorkerID = participant # save worker ID to data frame for trust 
+
+EXP1$trust <- EXP1$WorkerID # save worker ID to trust column 
+EXP1$trust <- as.factor(EXP1$trust) # factor it up 
+
+EXP1$trust = trustsdf$trusts[na.omit(match(EXP1$trust,trustsdf$WorkerID))] #save trust to EXP1
+
+target_data <- EXP1 %>% filter(Type == "Target") 
+bigger_model_response = lmer(target_data$responsible ~ Grammar*cop_people*trust + (1+Grammar*cop_people|Stimulus) + 
+(1+Grammar*cop_people|WorkerID), data = target_data)
+summary(bigger_model_response)
+
+```
+
+
 ##Plots
 ###Agent x Agentivity 
-```{r mean responsibility rating as a function of agent identity (x-axis) and agentivity (fill color)}
+```{r mean responsible rating as a function of agent identity (x-axis) and agentivity (fill color)}
 EXP1 %>% 
   filter(Type == "Target")  %>% 
   group_by(cop_people, Grammar) %>%
   summarise(responsible_mean = mean(responsible))  %>% 
   ggplot(aes(x = cop_people, y=responsible_mean)) +
   geom_bar(aes(fill = Grammar), position="dodge", stat = "identity") +
-  scale_x_discrete(guide = guide_axis(n.dodge=3))+
+  scale_x_discrete(guide = guide_axis(n.dodge=3)) +
   labs(y="Mean Responsibility Rating",x="Agent Identity")
+```
+
+###Trust
+```{r}
+EXP1 %>% 
+  group_by(trust, Type) %>%
+  summarise(responsible_mean = mean(responsible))  %>% 
+  ggplot(aes(x = trust, y=responsible_mean)) +
+  geom_point(position="identity", stat = "identity") +
+  geom_line() +
+  geom_smooth(method = "lm", se = TRUE)  +
+  facet_wrap(~Type) +
+  labs(x="Trust Measure",y="Mean Responsibility Rating")
+```
+
+```{r}
+target_data %>% 
+  group_by(trust, Grammar, cop_people) %>%
+  summarise(responsible_mean = mean(responsible))  %>% 
+  ggplot(aes(x = trust, y=responsible_mean)) +
+  geom_point(position="identity", stat = "identity") +
+  geom_line() +
+  geom_smooth(method = "lm", se = TRUE)  +
+  facet_grid(cop_people~Grammar) +
+  labs(x="Trust Measure",y="Mean Responsibility Rating")
+```
+
+
+
+```{r}
+target_data %>% 
+  group_by(trust, cop_people) %>%
+  summarise(responsible_mean = mean(responsible))  %>% 
+  ggplot(aes(x = trust, y=responsible_mean)) +
+  geom_point(position="identity", stat = "identity") +
+  geom_line() +
+  geom_smooth(method = "lm", se = TRUE)  +
+  facet_wrap(~cop_people) +
+  labs(x="Trust Measure",y="Mean Responsibility Rating")
 ```
 
 
 # Control:Responsibility
+
 ##Linear Regression
+```{r}
+
+```
+
+
+
 ##Plots
 ###Agentivity
 ```{r mean blame/responsibility rating as a function of agentivity}
 EXP1 %>% 
   group_by(Grammar,Type) %>%
-  summarise(respons_mean = mean(responsible))   %>% 
-  ggplot(aes(x = Grammar, y=respons_mean)) +
+  summarise(responsible_mean = mean(responsible))   %>% 
+  ggplot(aes(x = Grammar, y=responsible_mean)) +
   geom_bar(position="dodge", stat = "identity",fill = c("wheat", "saddlebrown", "darkgoldenrod", "lightsalmon4")) +
   scale_x_discrete(guide = guide_axis(n.dodge=3))+
-  geom_errorbar(position = position_dodge(width = .09), aes(ymax = respons_mean + ci.high(respons_mean), ymin= respons_mean - ci.low(respons_mean)), width=0.25) +
+  geom_errorbar(position = position_dodge(width = .09), aes(ymax = responsible_mean + ci.high(responsible_mean), ymin= responsible_mean - ci.low(responsible_mean)), width=0.25) +
   facet_wrap(~Type, nrow=1) +
   labs(y="Mean Responsibility Rating",x="Agentivity")
 ```
 
+### Agent identity 
+```{r mean blame rating as a function of agent identity (x-axis) and agentivity (fill color)}
+EXP1 %>% 
+  group_by(cop_people, Type) %>%
+  summarise(responsible_mean = mean(responsible))  %>% 
+  ggplot(aes(x = cop_people, y=responsible_mean)) +
+  geom_bar(position="dodge", stat = "identity", fill = c("wheat", "saddlebrown", "darkgoldenrod")) +
+  scale_x_discrete(guide = guide_axis(n.dodge=3)) +
+  geom_errorbar(position = position_dodge(width = .09), aes(ymax = responsible_mean + ci.high(responsible_mean), ymin= responsible_mean - ci.low(responsible_mean)), width=0.25) +
+  facet_wrap(~Type, nrow=1, scales = "free") +
+  labs(y="Mean Responsibility Rating",x="Agent Identity")
+```
 
+
+### Agent x Agentivity 
+```{r mean blame rating as a function of agent identity (x-axis) and agentivity (fill color)}
+EXP1 %>% 
+  group_by(cop_people, Grammar, Type) %>%
+  summarise(responsible_mean = mean(responsible))  %>% 
+  ggplot(aes(x = cop_people, y=responsible_mean)) +
+  geom_bar(aes(fill = Grammar), position="dodge", stat = "identity") +
+  scale_x_discrete(guide = guide_axis(n.dodge=3)) +
+    geom_errorbar(position = position_dodge(width = .09), aes(ymax = responsible_mean + ci.high(responsible_mean), ymin= responsible_mean - ci.low(responsible_mean)), width=0.25) +
+  facet_wrap(~Type, nrow=1, scales = "free") +
+  labs(y="Mean Responsibility Rating",x="Agent Identity")
+```
