@@ -181,11 +181,20 @@ EXP1 %>%
 
 
 # Demographics
-## race, age, gender
+## count
+
 ```{r}
+count_demo <- 
+  EXP1_no_NA %>% 
+  group_by(race, age, political.party,gender)%>%
+  summarise(count = n(),
+            trust_mean = mean(trust)) %>%
+  arrange(count)
+count_demo
 
 as.numeric(as.character(count_demo$count))
 table_demo <- aggregate(count_demo$count, list(count_demo$race, count_demo$age, count_demo$political.party, count_demo$gender), sum)
+
 colnames(table_demo)[1] = "Race"
 colnames(table_demo)[2] = "Age"
 colnames(table_demo)[3] = "Political"
@@ -200,20 +209,16 @@ summary(table_demo$Race)
 summary(table_demo$Age)
 summary(table_demo$Political)
 summary(table_demo$Gender)
+```
+
+### race, age, gender
+```{r}
 
 table_demo  %>%
   group_by(Race, Age, Political,Gender)%>%
   summarise(Count) %>%
   arrange(Count)
 
-table_demo %>% 
-  group_by(Race, Political,Age,Gender) %>%
-  summarise(Count) %>%
-  arrange(Count)  %>%
-  ggplot(aes(x = Gender, y=Count)) +
-  geom_bar(aes(fill = Political), position="stack", stat = "identity") +
-  facet_grid(Race~Age) + 
-  labs(y="Count",x="Gender")
 
 
 table_demo %>% 
@@ -247,8 +252,51 @@ table_demo %>%
   scale_x_discrete(guide = guide_axis(n.dodge=3)) +
   facet_grid(~Age) + 
   labs(y="Count",x="Race")
+
+
+table_demo %>% 
+  group_by(Race, Political,Age,Gender) %>%
+  summarise(Count) %>%
+  arrange(Count)  %>%
+  ggplot(aes(x = Gender, y=Count)) +
+  geom_bar(aes(fill = Political), position="stack", stat = "identity") +
+  facet_grid(Race~Age) + 
+  labs(y="Count",x="Gender")
 ```
 
+## trust
+```{r}
+
+
+as.double(as.character(count_demo$trust_mean))
+
+table_demo <- aggregate(count_demo$trust_mean, list(count_demo$race, count_demo$age, count_demo$political.party, count_demo$gender), mean)
+
+colnames(table_demo)[1] = "Race"
+colnames(table_demo)[2] = "Age"
+colnames(table_demo)[3] = "Political"
+colnames(table_demo)[4] = "Gender"
+colnames(table_demo)[5] = "Trust"
+table_demo$Political <- as.factor(table_demo$Political)
+levels(table_demo$Political) <- list('Democratic' = '5', 'Independent' =  '3', 'Libertarian' = '2','Green' = '4', 'Republican' = '1')
+levels(table_demo$Race) <- list('Asian' = 'Asian / Pacific Islander', 'Black' =  'Black', 'White' = 'White','Mixed' = 'Mixed', 'Native' = 'American Indian or Alaskan Native', "Hispanic" = "Hispanic")
+
+
+summary(table_demo$Race)
+summary(table_demo$Age)
+summary(table_demo$Political)
+summary(table_demo$Gender)
+
+
+table_demo  %>%
+  group_by(Race, Age, Political,Gender)%>%
+  summarise(Trust) %>%
+  arrange(Trust)
+
+
+
+
+```
 
 
 ## race x trust
@@ -259,13 +307,8 @@ EXP1_no_NA %>%
   geom_point()
 ```
 
-## party x trust
-```{r}
-EXP1_no_NA %>% 
-  group_by(trust, political.party, cop_people) %>%
-  ggplot(aes(x = trust, y = political.party)) +
-  geom_point()
-```
+
+
 
 
 ##Blame
@@ -324,7 +367,7 @@ big_model = lmer(target_data$Blame ~ Grammar*cop_people + (1+Grammar*cop_people|
 summary(big_model)
 ```
 
-###Trust + Big Model
+###**Trust + Big Model
 ```{r}
 target_data <- EXP1 %>% filter(Type == "Target") 
 politicallean <- predicted_values[["politicallean"]]
